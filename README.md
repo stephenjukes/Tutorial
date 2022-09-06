@@ -11,7 +11,7 @@
   
 * 20 mins: Codepen
   * [Sign up](https://codepen.io)
-  * Tags (with <a href="github.com/stephenjukes/Tutorial/Lesson1.html?raw=true">example</a>)
+  * Tags (with <a href="./Tutorial/Lesson1.html?raw=true">example</a>)
     * Headings
     * Paragraphs
     * Ordered lists
