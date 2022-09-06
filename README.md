@@ -11,7 +11,7 @@
   
 * 20 mins: Codepen
   * [Sign up](https://codepen.io)
-  * Tags
+  * Tags (with <a href="https://stephenjukes.github.io/Tutorial/Lesson1">example</a>)
     * Headings
     * Paragraphs
     * Ordered lists
