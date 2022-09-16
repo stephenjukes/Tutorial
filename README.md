@@ -17,20 +17,11 @@
     * Ordered lists
     * Unordered lists
     * Images 
-    * Links
-    
-* 20 mins
+    * Links (inc. of images)
+    * Lists (ordered and unordered)
+    * Tables
   * Indentation
-  * Inline Styling
-    * Background (color)
-      * Hex Colors
-    * Border (px, %)
-    * Width
-    * Color (color)
-    * Border Radius
-    * Padding
-    * Margin
-    * Font-family
+  * Inline styling
     
 ### Homework
 * Touch typing (1 / day)
@@ -43,3 +34,72 @@
   * [CheatSheet](https://htmlcheatsheet.com/)
 * Styles
   * [CSS CheatSheet](https://websitesetup.org/css3-cheat-sheet/)
+  
+## Lesson 2 - styling
+
+* Inline
+* Style tag
+* CSS file
+  * Box Model
+    * Height (px, %, rem, em)
+    * Width
+    * Padding
+    * Border (radius
+    * Margin
+    * Background (inc. image, linear-gradient)
+      * Image
+        * Repeat
+        * Position
+        * Size
+    * Opacity
+    * Shadow
+    * Overflow
+  * Text
+    * Color
+    * Size
+    * Line height
+    * Weight
+    * Text-transform
+  * Transform
+    * Translate
+    * Rotate
+  * Display
+    * Block
+    * Inline-block
+    * Flex
+   * Visibility
+   * Position
+     * Relative
+     * Absolute
+     * Fixed
+     * z-index;
+     
+### Homework
+Style the html website you made last lesson
+
+#### Resources
+[Tutorial Republic](https://www.tutorialrepublic.com/css-reference/css3-properties.php)
+     
+## Lesson 3: - Color
+  * rgb and rgba
+  * Hex Colors
+    * Base (6, 2, 16)
+    * Making red, blue, green 
+    * Making greys
+    * Mixing colors
+    * Changing shades
+    
+## Lesson 4: More CSS
+ * Centering
+ * Selectors
+ * Pseudo selectors
+ * Pseudo
+  * Hover
+  * Before / After
+  * Transitions
+ * Media queries
+ * Rules
+   * Specificity
+   * Id, Class, Tag
+   * !important
+   * (Inline)
