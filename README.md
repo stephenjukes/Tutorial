@@ -1,6 +1,6 @@
 # Tutorial
 
-## Lesson 1
+## Lesson 1 - Basic HTML
 * 20 mins: Touchtyping course
   * [Sign up](https://www.typingclub.com/)
   * First exercise
@@ -35,11 +35,13 @@
 * Styles
   * [CSS CheatSheet](https://websitesetup.org/css3-cheat-sheet/)
   
-## Lesson 2 - styling
+## Lesson 2 - Basic CSS
 
 * Inline
 * Style tag
 * CSS file
+* The benefit of CSS (DRY)
+* Examples of styling
   * Box Model
     * Height (px, %, rem, em)
     * Width
