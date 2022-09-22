@@ -81,8 +81,57 @@ Style the html website you made last lesson
 
 #### Resources
 [Tutorial Republic](https://www.tutorialrepublic.com/css-reference/css3-properties.php)
+
+## Lesson 3: - CSS - Precedence and Specificity
+ * Id, class, attribute and wildcard selector
+ * Combining, 
+   * Element with Id
+   * Element with class
+   * Difference with
+     * Id inside element
+     * Class inside element
+     * Element inside element
+     * Elment as direct child of element
+     * (Nest as many as desired)
+ * 3 column weighting
+   1. Id
+   1. Class  Attribute
+   1. Tag
+   [SpeciFISHity]()
+ * Precedence
+   1. !important
+   1. Inline
+   1. <style> tag
+   1. Combined (nested?) selectors
+   1. ID
+   1. Attribute
+   1. Class
+   1. Element (tag)
+   1. Last declaration
+ 
+ * Introduce approach to SpeciFISHity homework
+ 
+### Homework
+ * [Khan Academy](https://www.khanacademy.org/computing/computer-programming/html-css/more-css-selectors/e/quiz--css-specificity-rules)
+ * [SpeciFISHity quiz](https://estelle.github.io/CSS/selectors/exercises/specificity.html)
+ * [What colour are the puppies?](http://www.cknuckles.com/csci270/examples/L10_CSS_Wrapup/5_specificity_exercise.html)
+    * <p style="display:none">
+        001	p {color:black;}
+        002	div p {color:purple;}
+        011	.div1 p {color:orange;}
+        021	.div1 p.p1 {color:red;}
+        012	div p.p1 {color:green;}
+        101	#nav li {color:green;}
+        002	ul li {color:orange;}
+        002	ul > li {color:brown;}
+        121	#nav li:first-child {color:purple;}
+        003 	div div span {color:red;}
+        102	#wrapper div span {color:green;}
+        112	#main div span.yikes {color:gold;} 
+        111	#wrapper span.yikes {color:blue;}
+      </p>
      
-## Lesson 3: - Color
+## Lesson 4: - Color
   * rgb and rgba
   * Hex Colors
     * Base (6, 2, 16)
@@ -91,7 +140,7 @@ Style the html website you made last lesson
     * Mixing colors
     * Changing shades
     
-## Lesson 4: More CSS
+## Lesson 5: More CSS
  * Centering
  * Selectors
  * Pseudo selectors
