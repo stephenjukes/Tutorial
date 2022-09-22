@@ -113,7 +113,12 @@ Style the html website you made last lesson
 ### Homework
  * [Khan Academy](https://www.khanacademy.org/computing/computer-programming/html-css/more-css-selectors/e/quiz--css-specificity-rules)
  * [SpeciFISHity quiz](https://estelle.github.io/CSS/selectors/exercises/specificity.html)
- * [What colour are the puppies?](http://www.cknuckles.com/csci270/examples/L10_CSS_Wrapup/5_specificity_exercise.html) (Look at the Source for the questions and CSS)
+ * [What colour are the puppies?](http://www.cknuckles.com/csci270/examples/L10_CSS_Wrapup/5_specificity_exercise.html) 
+   * Look at the Source for the questions and CSS (all commented out)
+   * Copy the CSS into a plain text VS Code file
+   * Provide weightings for each line of CSS (eg: 0-1-0)
+   * Notice where each 'puppy' is in the html structure
+   * Use the html location of each 'puppy' and the weightings to determine what colour each 'puppy' should be
      
 ## Lesson 4: - Color
   * rgb and rgba
