@@ -114,21 +114,6 @@ Style the html website you made last lesson
  * [Khan Academy](https://www.khanacademy.org/computing/computer-programming/html-css/more-css-selectors/e/quiz--css-specificity-rules)
  * [SpeciFISHity quiz](https://estelle.github.io/CSS/selectors/exercises/specificity.html)
  * [What colour are the puppies?](http://www.cknuckles.com/csci270/examples/L10_CSS_Wrapup/5_specificity_exercise.html)
-    * <p style="display:none">
-        001	p {color:black;}
-        002	div p {color:purple;}
-        011	.div1 p {color:orange;}
-        021	.div1 p.p1 {color:red;}
-        012	div p.p1 {color:green;}
-        101	#nav li {color:green;}
-        002	ul li {color:orange;}
-        002	ul > li {color:brown;}
-        121	#nav li:first-child {color:purple;}
-        003 	div div span {color:red;}
-        102	#wrapper div span {color:green;}
-        112	#main div span.yikes {color:gold;} 
-        111	#wrapper span.yikes {color:blue;}
-      </p>
      
 ## Lesson 4: - Color
   * rgb and rgba
