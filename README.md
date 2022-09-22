@@ -107,16 +107,15 @@
    1. Tag
  * The meaning of 'Cascading' in 'Cascading Style Sheets'
  * Precedence
-   1. !important
-   1. Inline
-   1. <style> tag
-   1. Combined (nested?) selectors
-   1. ID
-   1. Attribute
-   1. Class
-   1. Element (tag)
+   1. Universal selector
+   1. Single Element (tag)
    1. Last declaration
- 
+   1. Combined (nested?) selectors
+   1. Class / Attribute
+   1. ID
+   1. <style> tag
+   1. Inline
+   1. !important (should be avoided in favour of anything lower than ID)
  * Introduce approach to SpeciFISHity homework
  
 ### Homework
