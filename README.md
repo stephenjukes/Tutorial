@@ -87,7 +87,7 @@
 * Style the html website you made last lesson
 
 #### Resources
-[Tutorial Republic](https://www.tutorialrepublic.com/css-reference/css3-properties.php)
+[W3Schools - CSS](https://www.w3schools.com/css/)
 
 ## Lesson 3: - CSS - Precedence and Specificity
  * Id, class, attribute and wildcard selector
