@@ -41,14 +41,15 @@
 * Style tag
 * CSS file
 * The benefit of CSS (DRY)
+* Comments
 * Examples of styling
   * Box Model
     * Height (px, %, rem, em)
     * Width
     * Padding
-    * Border (radius
+    * Border (radius)
     * Margin
-    * Background (inc. image, linear-gradient)
+    * Background / background-color (inc. image, linear-gradient)
       * Image
         * Repeat
         * Position
@@ -57,11 +58,15 @@
     * Shadow
     * Overflow
   * Text
+    * Font
+      * Family
+      * Size
+      * Line height
+      * Weight
+      * Shorthand
     * Color
-    * Size
-    * Line height
-    * Weight
     * Text-transform
+    * Text-decoration
   * Transform
     * Translate
     * Rotate
@@ -77,7 +82,9 @@
      * z-index;
      
 ### Homework
-Style the html website you made last lesson
+* [W3Schools - CSS Selectors](https://www.w3schools.com/css/exercise.asp?filename=exercise_selectors1)
+* [W3Schools - CSS How To](https://www.w3schools.com/css/exercise.asp?filename=exercise_howto1)
+* Style the html website you made last lesson
 
 #### Resources
 [Tutorial Republic](https://www.tutorialrepublic.com/css-reference/css3-properties.php)
@@ -85,18 +92,20 @@ Style the html website you made last lesson
 ## Lesson 3: - CSS - Precedence and Specificity
  * Id, class, attribute and wildcard selector
  * Combining, 
-   * Element with Id
-   * Element with class
+   * Element with Id (div#myId)
+   * Element with class (div.myClass)
    * Difference with
-     * Id inside element
-     * Class inside element
-     * Element inside element
-     * Element as direct child of element
+     * Id inside element (div# myId)
+     * Class inside element (div .myClass)
+     * Element inside element (div p)
+     * Element as direct child of element  (div > p)
+     * Elements with same CSS (div, p)
      * (Nest as many as desired)
  * [3 column weighting](https://specifishity.com/)
    1. Id
    1. Class  Attribute
    1. Tag
+ * The meaning of 'Cascading' in 'Cascading Style Sheets'
  * Precedence
    1. !important
    1. Inline
@@ -138,3 +147,6 @@ Style the html website you made last lesson
   * Before / After
   * Transitions
  * Media queries
+ 
+ ### Homework
+ * [W3Schools CSS Quiz](https://www.w3schools.com/quiztest/quiztest.asp?qtest=CSS)
