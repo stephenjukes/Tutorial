@@ -91,7 +91,7 @@ Style the html website you made last lesson
      * Id inside element
      * Class inside element
      * Element inside element
-     * Elment as direct child of element
+     * Element as direct child of element
      * (Nest as many as desired)
  * [3 column weighting](https://specifishity.com/)
    1. Id
@@ -138,8 +138,3 @@ Style the html website you made last lesson
   * Before / After
   * Transitions
  * Media queries
- * Rules
-   * Specificity
-   * Id, Class, Tag
-   * !important
-   * (Inline)
