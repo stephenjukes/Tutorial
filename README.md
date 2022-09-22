@@ -128,6 +128,7 @@
    * Provide weightings for each line of CSS (eg: 0-1-0)
    * Notice where each 'puppy' is in the html structure
    * Use the html location of each 'puppy' and the weightings to determine what colour each 'puppy' should be
+   * ([solution](Lesson3_CSSPrecedenceAndSpecificity/PuppyColors.txt))
      
 ## Lesson 4: - Color
   * rgb and rgba
