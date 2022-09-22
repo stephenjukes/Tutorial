@@ -93,11 +93,10 @@ Style the html website you made last lesson
      * Element inside element
      * Elment as direct child of element
      * (Nest as many as desired)
- * 3 column weighting
+ * [3 column weighting](https://specifishity.com/)
    1. Id
    1. Class  Attribute
    1. Tag
-   [SpeciFISHity]()
  * Precedence
    1. !important
    1. Inline
