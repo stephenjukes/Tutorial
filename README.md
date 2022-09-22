@@ -113,7 +113,7 @@ Style the html website you made last lesson
 ### Homework
  * [Khan Academy](https://www.khanacademy.org/computing/computer-programming/html-css/more-css-selectors/e/quiz--css-specificity-rules)
  * [SpeciFISHity quiz](https://estelle.github.io/CSS/selectors/exercises/specificity.html)
- * [What colour are the puppies?](http://www.cknuckles.com/csci270/examples/L10_CSS_Wrapup/5_specificity_exercise.html)
+ * [What colour are the puppies?](http://www.cknuckles.com/csci270/examples/L10_CSS_Wrapup/5_specificity_exercise.html) (Look at the Source for the questions and CSS)
      
 ## Lesson 4: - Color
   * rgb and rgba
