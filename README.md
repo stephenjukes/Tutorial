@@ -16,8 +16,6 @@
     * Paragraphs
     * Ordered lists
     * Unordered lists
-    * Images 
-    * Links (inc. of images)
     * Lists (ordered and unordered)
     * Tables
   * Indentation
@@ -35,7 +33,20 @@
 * Styles
   * [CSS CheatSheet](https://websitesetup.org/css3-cheat-sheet/)
   
-## Lesson 2 - Basic CSS
+## Lesson 2 - Images and Links
+
+* Folder structure (index, html, images)
+* Links
+  * url
+  * path
+* Images 
+  * url
+  * path
+  * as link
+  
+(if still time, start on homepage with navbar)
+  
+## Lesson 3 - Basic CSS
 
 * Inline
 * Style tag
@@ -89,7 +100,7 @@
 #### Resources
 [W3Schools - CSS](https://www.w3schools.com/css/)
 
-## Lesson 3: - CSS - Precedence and Specificity
+## Lesson 4: - CSS - Precedence and Specificity
  * Id, class, attribute and wildcard selector
  * Combining, 
    * Element with Id (div#myId)
@@ -129,7 +140,7 @@
    * Use the html location of each 'puppy' and the weightings to determine what colour each 'puppy' should be
    * ([solution](Lesson3_CSSPrecedenceAndSpecificity/PuppyColors.txt))
      
-## Lesson 4: - Color
+## Lesson 5: - Color
   * rgb and rgba
   * Hex Colors
     * Base (6, 2, 16)
