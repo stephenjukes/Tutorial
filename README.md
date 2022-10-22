@@ -104,23 +104,27 @@
      * z-index;
      
 ## Lesson 5: - Flexbox (and Grid?)
-
   * __Inititial setup__ 
     * parent and 3 children divs
     * With a child width of 200px
   * __Parent properties__
-    * flex-direction
     * wrap and no-wrap
     * justify-content with small width
       * start, end, center, space-between, space-around, space-evenly
     * align-items, (with parent and child height)
       * start, end, center, stretch (default)
     * align-content (with child height)
+    * flex-direction
+      * row, column, row-reverse, column-reverse
+      * justify-content and align-items are relative to the direction
   * __Child properties__
     * Order
     * Align-self
     * Without width and `flex: 1 1 auto` on all children
     * Explanation of each of the values: 1, 1 and auto
+
+### Homework
+* [Flexbox Froggy](flexboxfroggy.com)
 
 ## Lesson 6: - CSS - Precedence and Specificity
  * Id, class, attribute and wildcard selector
