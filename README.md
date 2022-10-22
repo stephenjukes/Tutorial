@@ -81,6 +81,17 @@
   * Transform
     * Translate
     * Rotate
+     
+### Homework
+* [W3Schools - CSS Selectors](https://www.w3schools.com/css/exercise.asp?filename=exercise_selectors1)
+* [W3Schools - CSS How To](https://www.w3schools.com/css/exercise.asp?filename=exercise_howto1)
+* Style the html website you made last lesson
+
+#### Resources
+[W3Schools - CSS](https://www.w3schools.com/css/)
+
+## Lesson 4: - Display, Visibility and Position (not including flex and grid)
+
   * Display
     * Block
     * Inline-block
@@ -92,15 +103,25 @@
      * Fixed
      * z-index;
      
-### Homework
-* [W3Schools - CSS Selectors](https://www.w3schools.com/css/exercise.asp?filename=exercise_selectors1)
-* [W3Schools - CSS How To](https://www.w3schools.com/css/exercise.asp?filename=exercise_howto1)
-* Style the html website you made last lesson
+## Lesson 5: - Flexbox and Grid
 
-#### Resources
-[W3Schools - CSS](https://www.w3schools.com/css/)
+  * Inititial setup with parent and 3 children divs
+    * With a child width of 200px
+  * Parent properties
+    * flex-direction
+    * wrap and no-wrap
+    * justify-content with small width
+      * start, end, center, space-between, space-around, space-evenly
+    * align-items, (with parent and child height)
+      * start, end, center, stretch (default)
+    * align-content (with child height)
+  * Child properties
+    * Order
+    * Align-self
+    * Without width and `flex: 1 1 auto` on all children
+    * Explanation of each of the values: 1, 1 and auto
 
-## Lesson 4: - CSS - Precedence and Specificity
+## Lesson 6: - CSS - Precedence and Specificity
  * Id, class, attribute and wildcard selector
  * Combining, 
    * Element with Id (div#myId)
@@ -140,7 +161,7 @@
    * Use the html location of each 'puppy' and the weightings to determine what colour each 'puppy' should be
    * ([solution](Lesson3_CSSPrecedenceAndSpecificity/PuppyColors.txt))
      
-## Lesson 5: - Color
+## Lesson 7: - Color
   * rgb and rgba
   * Hex Colors
     * Base (6, 2, 16)
@@ -149,7 +170,7 @@
     * Mixing colors
     * Changing shades
     
-## Lesson 5: More CSS
+## Lesson 8: More CSS
  * Centering
  * Selectors
  * Pseudo selectors
