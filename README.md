@@ -124,7 +124,7 @@
     * Explanation of each of the values: 1, 1 and auto
 
 ### Homework
-* [Flexbox Froggy](flexboxfroggy.com)
+* [Flexbox Froggy](https://flexboxfroggy.com/)
 
 ## Lesson 6: - CSS - Precedence and Specificity
  * Id, class, attribute and wildcard selector
