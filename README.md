@@ -126,6 +126,9 @@
 ### Homework
 * [Flexbox Froggy](https://flexboxfroggy.com/)
 
+#### Resources
+* https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
 ## Lesson 6: - CSS - Precedence and Specificity
  * Id, class, attribute and wildcard selector
  * Combining, 
