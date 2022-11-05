@@ -18,6 +18,9 @@
     * Unordered lists
     * Lists (ordered and unordered)
     * Tables
+    * Input (if time)
+      * type
+      * attributes (https://www.w3schools.com/tags/tag_input.asp)
   * Indentation
   * Inline styling
     
@@ -33,9 +36,11 @@
 * Styles
   * [CSS CheatSheet](https://websitesetup.org/css3-cheat-sheet/)
   
+  
 ## Lesson 2 - Images and Links
 
 * Folder structure (index, html, images)
+* Introduction of attributes
 * Links
   * url
   * path
@@ -45,13 +50,14 @@
   * as link
   
 (if still time, start on homepage with navbar)
-  
-## Lesson 3 - Basic CSS
+
+
+## Lesson 3 - CSS. Basic styling
 
 * Inline
 * Style tag
 * CSS file
-* The benefit of CSS (DRY)
+* The benefit of CSS (Separation of concerns, DRY)
 * Comments
 * Examples of styling
   * Box Model
@@ -90,6 +96,7 @@
 #### Resources
 [W3Schools - CSS](https://www.w3schools.com/css/)
 
+
 ## Lesson 4: CSS Selectors
 
 * tags (eg: li)
@@ -108,6 +115,7 @@
 
 ### Resources
 * https://www.w3schools.com/csSref/css_selectors.php
+
 
 ## Lesson 5: - CSS - Precedence and Specificity
  * Id, class, attribute and wildcard selector
@@ -149,6 +157,7 @@
    * Use the html location of each 'puppy' and the weightings to determine what colour each 'puppy' should be
    * ([solution](Lesson3_CSSPrecedenceAndSpecificity/PuppyColors.txt))
 
+ 
 ## Lesson 6: - Display, Visibility and Position (not including flex and grid)
 
   * Display
@@ -162,6 +171,7 @@
      * Fixed
      * z-index;
      
+ 
 ## Lesson 7: - Flexbox (and Grid?)
   * __Inititial setup__ 
     * parent and 3 children divs
@@ -188,6 +198,7 @@
 #### Resources
 * https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
+ 
 ## Lesson 8: - Color
   * rgb and rgba
   * Hex Colors
