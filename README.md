@@ -90,46 +90,26 @@
 #### Resources
 [W3Schools - CSS](https://www.w3schools.com/css/)
 
-## Lesson 4: - Display, Visibility and Position (not including flex and grid)
+## Lesson 4: CSS Selectors
 
-  * Display
-    * Block
-    * Inline-block
-    * Flex
-   * Visibility
-   * Position
-     * Relative
-     * Absolute
-     * Fixed
-     * z-index;
-     
-## Lesson 5: - Flexbox (and Grid?)
-  * __Inititial setup__ 
-    * parent and 3 children divs
-    * With a child width of 200px
-  * __Parent properties__
-    * wrap and no-wrap
-    * justify-content with small width
-      * start, end, center, space-between, space-around, space-evenly
-    * align-items, (with parent and child height)
-      * start, end, center, stretch (default)
-    * align-content (with child height)
-    * flex-direction
-      * row, column, row-reverse, column-reverse
-      * justify-content and align-items are relative to the direction
-  * __Child properties__
-    * Order
-    * Align-self
-    * Without width and `flex: 1 1 auto` on all children
-    * Explanation of each of the values: 1, 1 and auto
+* tags (eg: li)
+  * tags and descendants (eg: ul li)
+  * tags and children (eg: ul > li)
+* class
+* id
+* attribute
+  * property name only (eg: input[type], input[checked])
+  * property and value (eg: input[type="checkbox"])
+* ::before
+* ::after
+* :first-child & :nth-child(n)
+* :first-of-type & :nth-of-type(n)
+* :not
 
-### Homework
-* [Flexbox Froggy](https://flexboxfroggy.com/)
+### Resources
+* https://www.w3schools.com/csSref/css_selectors.php
 
-#### Resources
-* https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-
-## Lesson 6: - CSS - Precedence and Specificity
+## Lesson 5: - CSS - Precedence and Specificity
  * Id, class, attribute and wildcard selector
  * Combining, 
    * Element with Id (div#myId)
@@ -168,8 +148,47 @@
    * Notice where each 'puppy' is in the html structure
    * Use the html location of each 'puppy' and the weightings to determine what colour each 'puppy' should be
    * ([solution](Lesson3_CSSPrecedenceAndSpecificity/PuppyColors.txt))
+
+## Lesson 6: - Display, Visibility and Position (not including flex and grid)
+
+  * Display
+    * Block
+    * Inline-block
+    * Flex
+   * Visibility
+   * Position
+     * Relative
+     * Absolute
+     * Fixed
+     * z-index;
      
-## Lesson 7: - Color
+## Lesson 7: - Flexbox (and Grid?)
+  * __Inititial setup__ 
+    * parent and 3 children divs
+    * With a child width of 200px
+  * __Parent properties__
+    * wrap and no-wrap
+    * justify-content with small width
+      * start, end, center, space-between, space-around, space-evenly
+    * align-items, (with parent and child height)
+      * start, end, center, stretch (default)
+    * align-content (with child height)
+    * flex-direction
+      * row, column, row-reverse, column-reverse
+      * justify-content and align-items are relative to the direction
+  * __Child properties__
+    * Order
+    * Align-self
+    * Without width and `flex: 1 1 auto` on all children
+    * Explanation of each of the values: 1, 1 and auto
+
+### Homework
+* [Flexbox Froggy](https://flexboxfroggy.com/)
+
+#### Resources
+* https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+## Lesson 8: - Color
   * rgb and rgba
   * Hex Colors
     * Base (6, 2, 16)
@@ -178,14 +197,10 @@
     * Mixing colors
     * Changing shades
     
-## Lesson 8: More CSS
+## Lesson 9: More CSS
  * Centering
- * Selectors
- * Pseudo selectors
- * Pseudo
-  * Hover
-  * Before / After
-  * Transitions
+ * Hover
+ * Transitions
  * Media queries
  
  ### Homework
