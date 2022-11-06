@@ -21,6 +21,7 @@
     * Input (if time)
       * type
       * attributes (https://www.w3schools.com/tags/tag_input.asp)
+  * Introduction to HTML5 tags
   * Indentation
   * Inline styling
     
