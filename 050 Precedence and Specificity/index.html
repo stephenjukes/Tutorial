@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Precedence and Specificity</title>
+        <link rel="stylesheet", href="precedenceAndSpecificity.css">
+    </head>
+    <body>
+        <h3>My Ordered List</h3>
+        <i>(I am styled only by the universal selector - '*')</i>
+
+        <ol class="ordered-list-class">
+            <li>
+            <code>li</code> <br>
+            I am a simple 'li' tag. I am styled by the 'li' tag selector. I'm currently 'aqua', but uncomment the last line in the CSS, and see what happens. This shows that everything being equal with specificity, styles that come later in the CSS overrides styles that are declared before.
+            </li>
+        
+        <li class="my-class">
+            <code>.my-class</code> <br>
+            I am also an 'li' tag, but am styled using a 'class' selector, which overrides the 'tag' selector
+        </li>
+        
+        <li id="my-id">
+            <code>#my-id</code> <br>
+            'id' selectors override 'class' selectors
+        </li>
+        </ol>
+
+
+        <h3>My Unordered List</h3>
+        <i>(I am also styled only by the universal selector - '*')</i>
+
+        <ul class="unordered-list-class">
+        <li>
+            <code>ul li</code> <br>
+            I am styled using both the 'li' selector and its 'ul' ancestor, which overrides the styling by the 'li' selector alone. The more tags used in the selector, the more specific (and powerful) that selector will be
+        </li> 
+        
+        <li class="my-class">
+            <code>li.my-class</code> <br>
+            Like item '2' of the ordered list, I am styled by class, but combined with the tag, overrides styling by class alone
+        </li>
+        
+        <li id="my-id">
+            <code>.unordered-list-class #my-id</code> <br>
+            But, an 'id' with a 'class' will override an 'id' selector alone
+        </li>
+        
+        <li id="my-id" style="color:magenta">
+            <code>&lt;li style="color:magenta"&gt;</code> <br>
+            Inline styling will override anything styled with CSS...
+        </li>
+        
+        <li id=my-id" class="my-important-class" style="color:magenta">
+            <code>color: red !important</code> <br>
+            ... except when the !important property is used in CSS, which overrides everything! (It is recommended not to use this property, since it is unlikely that anything is really THAT important that it should never be overidden.)
+        </li>
+    </body>
+</html>
