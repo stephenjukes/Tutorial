@@ -213,8 +213,10 @@
     
 ## Lesson 9: More CSS
  * Centering
+ * Variables
  * Hover
  * Transitions
+ * Animations
  * Media queries
  
  ### Homework
