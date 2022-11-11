@@ -1,5 +1,7 @@
 # Tutorial
 
+[View site](https://stephenjukes.github.io/Tutorial/)
+
 ## Lesson 1 - Basic HTML
 * 20 mins: Touchtyping course
   * [Sign up](https://www.typingclub.com/)
