@@ -110,11 +110,14 @@
 * attribute
   * property name only (eg: input[type], input[checked])
   * property and value (eg: input[type="checkbox"])
+* https://www.w3schools.com/csSref/css_selectors.php
+* pseudo selectors
+  * tree structure
+  * user action
+  * functional
+  * https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 * ::before
 * ::after
-* :first-child & :nth-child(n)
-* :first-of-type & :nth-of-type(n)
-* :not
 
 ### Resources
 * https://www.w3schools.com/csSref/css_selectors.php
@@ -213,11 +216,9 @@
     
 ## Lesson 9: More CSS
  * Centering
- * Variables
- * Hover
- * Transitions
- * Animations
- * Media queries
+ * Transitions and Animations
+ * Variables and Media queries
+ * SCSS
  
  ### Homework
  * [W3Schools CSS Quiz](https://www.w3schools.com/quiztest/quiztest.asp?qtest=CSS)
