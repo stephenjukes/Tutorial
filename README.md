@@ -1,7 +1,6 @@
 # Tutorial
 
-[View site](https://stephenjukes.github.io/Tutorial/){:target="_blank"}
-<a href="https://stephenjukes.github.io/Tutorial/" target="_blank">View Site</a>
+[View site](https://stephenjukes.github.io/Tutorial/)
 
 ## Lesson 1 - Basic HTML
 * 20 mins: Touchtyping course
