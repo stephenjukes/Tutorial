@@ -1,6 +1,7 @@
 # Tutorial
 
 [View site](https://stephenjukes.github.io/Tutorial/)
+<a href="https://stephenjukes.github.io/Tutorial/" target="_blank">View Site</a>
 
 ## Lesson 1 - Basic HTML
 * 20 mins: Touchtyping course
