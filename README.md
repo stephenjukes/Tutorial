@@ -1,6 +1,6 @@
 # Tutorial
 
-[View site](https://stephenjukes.github.io/Tutorial/)
+[View site](https://stephenjukes.github.io/Tutorial/){:target="_blank"}
 <a href="https://stephenjukes.github.io/Tutorial/" target="_blank">View Site</a>
 
 ## Lesson 1 - Basic HTML
