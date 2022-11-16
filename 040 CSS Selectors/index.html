@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="selectors.css">
+        <title>CSS Selectors</title>
+    </head>
+    <body>
+        <h1>CSS Selectors</h1>
+
+        <p>
+        CSS Selectors are ways that you can use CSS to identify html elements for styling. We will have used 'tag' selectors in previous lessons, eg: <code>h1 { color: blue; }</code> where <code>h1</code> is the tag, and possibly also 'id' and 'class' selectors, (these are repeated here if this is the case). These do not represent all selectors, but a sample of the main types that are used.
+        </p>
+
+        <section id="before-after">
+        <h2>Before and After</h2>
+        
+        <figure>
+            <ol>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            </ol>
+        </figure>
+        </section>
+
+        <section>
+        <h2>Tag, Id, Class</h2>
+        
+        <figure id="tag">
+            <ol>
+            <li id="my-id">li id="my-id"</li>
+            <li class="my-class">li class="my-class"</li>
+            <li class="my-class">li class="my-class"</li>
+            </ol>
+        </figure>
+        
+        <figure id="id">
+            <ol>
+            <li id="my-id">li id="my-id"</li>
+            <li class="my-class">li class="my-class"</li>
+            <li class="my-class">li class="my-class"</li>
+            </ol>
+        </figure>
+        
+        <figure id="class">
+            <ol>
+            <li id="my-id">li id="my-id"</li>
+            <li class="my-class">li class="my-class"</li>
+            <li class="my-class">li class="my-class"</li>
+            </ol>
+        </figure>
+        </section>
+
+        <section>
+        <h2>Combinations</h2>
+        <figure id="tags-of-class">
+            <figcaption>
+            <strong>No space:</strong> 
+            all 'divs' with the class '.grandparent'
+            </figcaption>
+            
+            <div class="grandparent">
+            <div class="parent">
+                <div class="child"></div>
+            </div>
+            </div>
+        </figure>
+        
+        <figure id="this-and-that">
+            <figcaption>
+            <strong>With comma:</strong>
+            all 'divs' and elements with a class of '.grandparent'
+            </figcaption>
+            <div class="grandparent">
+            <div class="parent">
+                <div class="child"></div>
+            </div>
+            </div>
+        </figure>
+
+        <figure id="descendents">
+            <figcaption>
+            <strong>With space:</strong>
+            All divs that are descendents of elements with class '.grandparent' 
+            </figcaption>
+            <div class="grandparent">
+            <div class="parent">
+                <div class="child"></div>
+            </div>
+            </div>
+        </figure>
+
+        <figure id="direct-children">
+            <figcaption>
+            <strong>with &gt;:</strong>   
+            All divs that are direct children of elements with class '.grandparent'
+            </figcaption>
+            
+            <div class="grandparent">
+            <div class="parent">
+                <div class="child"></div>
+            </div>
+            </div>
+        </figure>
+        </section>
+
+        <section>
+        <h2>Attributes</h2>
+        
+        <figure id="attribute-key">
+            <figcaption>
+            only html elements with the 'checked' attribute  
+            </figcaption>
+            
+            <input type="checkbox" checked>
+            <input type="checkbox">
+            <input type="radio" checked>
+            <input type="radio">
+        </figure>
+        
+        <figure id="attribute-value">
+            <figcaption>
+            inputs with a type of 'text'
+            </figcaption>
+            <input type="checkbox" checked>
+            <input type="checkbox">
+            <input type="radio" checked>
+            <input type="radio">
+        </figure>
+        </section>
+            
+        <section id="pseudo">
+        <h2>Pseudo Selectors</h2>
+        
+        <h3>Input</h3>
+        
+        <figure id='pseudo-checked'>
+            <figcaption>
+            Unlike [checked], this targets inputs which have actually been checked - (try it)
+            </figcaption>
+            <input type="checkbox">
+            <input type="checkbox" checked>
+            <input type="checkbox">
+            <input type="checkbox">
+        </figure>
+        
+        <figure id='pseudo-required'>
+            <input type="text" required>
+            <input type="text">
+        </figure>
+        
+        <figure id='pseudo-readonly'>
+            <input type="text" value="this can be changed">
+            <input type="text" value="this is read only" readonly>
+        </figure>
+        
+        <h3>User Action</h3>
+        <figure id='pseudo-hover' class='user-action'>
+            <figcaption>
+            hover over me
+            </figcaption>
+            <div></div>
+        </figure>
+        
+        <figure id='pseudo-active' class='user-action'>
+            <figcaption>
+            click me
+            </figcaption>
+            <div></div>
+        </figure>
+        
+        <h3>Functional</h3>
+        
+        <p style="color:red">This doesn't currently work with Firefox !!</p>
+        
+        <figure id="pseudo-has">
+            <div>
+            <p>I'm a paragraph</p>
+            </div>
+                <div>
+            <p>I'm a paragraph</p>
+            </div>
+            <div>
+            I'm not a paragraph
+            </div>
+        </figure>
+        
+        <figure id="pseudo-not">
+            <div>
+            <p>I'm a paragraph</p>
+            </div>
+                <div>
+            <p>I'm a paragraph</p>
+            </div>
+            <div>
+            I'm not a paragraph
+            </div>
+        </figure>
+        
+        <h3>Tree-Structure</h3>
+        <figure id='pseudo-tree'>
+            <h4>Heading</h4>
+            <p>Paragraph</p>
+            <p>Paragraph</p>
+            <p>Paragraph</p>
+            <p>Paragraph</p>
+
+            <h4>Heading</h4> 
+            <p>Paragraph</p>
+            <p>Paragraph</p>
+        </figure>
+        </section>
+    </body>
+</html>

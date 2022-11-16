@@ -1,0 +1,163 @@
+p {
+    max-width: 800px;
+    line-height: 22px;
+  }
+  
+  figure::before, 
+  code {
+    width: fit-content;
+    padding: 2px 5px;
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  figure::before {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  *::after {
+    margin-left: 20px;
+    color: #222;
+    font: italic normal 15px serif;
+  }
+  
+  h2 {
+    margin: 40px 0 10px;
+  }
+  
+  h3 {
+    margin: 20px 0  0;
+  }
+  
+  section {
+    margin: 20px 0;
+  }
+  
+  figure {
+    display: inline-block;
+    margin-right: 50px;
+  }
+  
+  figcaption {
+    max-width: 200px;
+    font-style: italic;
+    margin: 10px 0;
+  }
+  
+  div {
+    border: 5px solid gray;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  input {
+    margin: 5px;
+  }
+  
+  /* Before and After */
+  #before-after figure::before {
+    content: 'li::before, li::after';
+  }
+  
+  #before-after li::before {
+    content: 'This is Before';
+    color: green;
+    margin-right: 20px;
+  }
+  
+  #before-after li::after {
+    content: ' This is After';
+    color: red;
+    margin-left: 20px;
+  }
+  
+  /* Tag, Id, Class */
+  #tag li { color: #39f; }
+  #tag::before { content: 'li { ... #39f; }'}
+  
+  #id #my-id { color: green; }
+  #id::before {content: '#my-id { ... green; }'}
+  
+  #class .my-class { color: red; }
+  #class::before { content: '.my-class { ... red; }'}
+  
+  
+  /* Combinations */
+  #tags-of-class div.grandparent { border-color: orange; }
+  #tags-of-class::before { content: 'div.grandparent'; }
+  
+  #descendents .grandparent div { border-color: orange }
+  #descendents::before { content: '.grandparent div'; }
+  
+  #this-and-that .grandparent, #this-and-that div { border-color: orange }
+  #this-and-that::before { content: '.grandparent, div'; }
+  
+  #direct-children .grandparent > div { border-color: orange }
+  #direct-children::before { content: '.grandparent > div'; }
+  
+  /* Attributes */
+  #attribute-key [checked] { outline: 4px solid orange; }
+  #attribute-key::before { content: '[checked] { ... orange; }'}
+  
+  #attribute-value [type=radio] { outline: 4px solid orange; }
+  #attribute-value::before { content: '[type=radio] { ... orange }'}
+  
+  /* Pseudo Selectors */
+  /* Input */
+  #pseudo-checked :checked { outline: 4px solid orange; }
+  #pseudo-checked::before { content: ':checked { ... orange }'}
+  
+  #pseudo-required :required { outline: 2px solid orange; }
+  #pseudo-required::before { content: ':required { ... orange }'}
+  
+  #pseudo-readonly :read-only { color: gray; }
+  #pseudo-readonly::before { content: ':read-only { color: gray }'}
+  
+  /* User Action */
+  .user-action div { 
+    background: url('https://i.ebayimg.com/images/g/1mIAAOSwSX9XBTA7/s-l500.jpg');
+    background-size: contain;
+    border: none;
+    height: 100px;
+    width: 100px;
+  }
+  #pseudo-hover :hover {
+    background: url('https://i.pinimg.com/originals/2c/66/2d/2c662d4de56c3603377dd666c24f3630.png');
+    background-size: contain;
+  }
+  #pseudo-hover::before { content: ':hover { background: url(...)}'}
+  
+  #pseudo-active :active {
+    background: url('https://i.pinimg.com/originals/2c/66/2d/2c662d4de56c3603377dd666c24f3630.png');
+    background-size: contain;
+  }
+  #pseudo-active::before { content: ':active { background: ...}'}
+  
+  /* Functional */
+  #pseudo-has div:has(p) { border-color: orange; }
+  #pseudo-has::before { content: 'div:has(p) { ... orange }'}
+  
+  #pseudo-not div:not(:has(p)) {border-color: orange; }
+  #pseudo-not::before { content: 'div:not(:has(p)) { ... orange }'}
+  
+  /* Tree */
+  #pseudo-tree h4:first-child { color: red; }
+  #pseudo-tree h4:first-child::after { content: 'h3:first-child - red'; }
+  
+  #pseudo-tree p:first-of-type { color: orange; }
+  #pseudo-tree p:first-of-type::after { content: 'p:first-of-type - orange'; }
+  
+  #pseudo-tree h4:last-of-type { color: green; }
+  #pseudo-tree h4:last-of-type::after { content: 'h3:last-of-type - green'; }
+  
+  #pseudo-tree p:last-child {color: blue; }
+  #pseudo-tree p:last-child::after { content: 'p:last-child - blue'; }
+  
+  #pseudo-tree p:nth-child(4) { color: purple; }
+  #pseudo-tree p:nth-child(4)::after { content: 'p:nth-child(4) - purple';}
+  
+  #pseudo-tree p:nth-of-type(4) { color: magenta; }
+  #pseudo-tree p:nth-of-type(4)::after { content: 'p:nth-of-type(4) - magenta';}
+  
