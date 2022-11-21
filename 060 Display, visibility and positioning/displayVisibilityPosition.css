@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    padding: 20px;
+  }
+
+  section {
+    width: 100%;
+  }
+  
+  figure {
+    margin: 20px;
+    padding: 10px 70px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+  }
+  
+  figure::before {
+    display: inline-block;
+    font: bold 14px Monospace;
+    background: #eee;
+    border: 2px solid #aaa;
+    padding: 5px 10px;
+    border-radius: 15px;
+  }
+  
+  article figure {
+    display: inline-block;
+  }
+  
+  figcaption {
+    margin: 10px 0;
+  }
+  
+  li {
+    height: 50px;
+    width: 50px;
+    list-style: none;
+    margin: 5px;
+    border: 5px solid gray;
+    border-radius: 100%;
+  }
+  
+  h2 {
+    margin: 50px 0 10px;
+  }
+  
+  h1, h3, h4 {
+    margin: 10px 0 10px;
+  }
+  
+  li:nth-child(1) { background: red; }
+  li:nth-child(2) { background: orange; }
+  li:nth-child(3) { background: green; }
+  
+  .mystery {
+    cursor: pointer;
+    text-align: center;
+    font: 20px/50px serif;
+    overflow: visible;
+    z-index: 10;
+  }
+  .mystery::before {
+    content: '?';
+  }
+  
+  .annotated::after,
+  .mystery:hover::before {
+    position: absolute ;
+    display: inline-block;
+    font: 14px/20px serif;
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Display */
+  #block li { 
+    display: block; 
+  }
+  
+  #inline-block li { 
+    display: inline-block; 
+  }
+  
+  #inline li { 
+    display: inline;
+    font-size: 30px;
+    border-radius: 5px;
+  }
+  
+  #flex ul { 
+    display: flex; 
+    justify-content: space-between;
+  }
+  
+  #none li:nth-child(2) { 
+    display: none; 
+  }
+  
+  /* Visibility */
+  #visibility #hidden .target {
+    visibility: hidden;
+  }
+  #visibility #hidden::before {
+    content: 'visibility: hidden';
+  }
+  
+  /* Position */
+  #static .target {
+    position: static;
+    left: 100px;
+  }
+  #static::before {
+    content: 'left: 100px';
+  }
+  
+  #relative .target {
+    position: relative;
+    left: 100px;
+  }
+  #relative::before {
+    content: 'left: 100px';
+  }
+  
+  #absolute .target {
+    position: absolute;
+  }
+  
+  .absolute.no-amendment::before {
+    content: 'position: absolute';
+  }
+  
+  .absolute.amended-no-ancestor .target {
+    top: 0;
+    right: 0;
+  }
+  .absolute.amended-no-ancestor::before {
+    content: 'top: 0; right: 0;'
+  }
+  .absolute.amended-no-ancestor .mystery:hover::before {
+    content: "I am absolutely positioned, but none of my ancestors have been given an explicit position. My 'parent' is therefore assumed to be the html 'body', and have therefore been positioned to the top right hand corner of the 'body', in accordance with my styling.";
+    top: 50%;
+    right: 50%;
+    left: -500px;
+    border-radius: 20px 0 20px 20px;
+  }
+  
+  .absolute.amended-with-ancestor { position: relative; }
+  .absolute.amended-with-ancestor .target { 
+    position: absolute; 
+    top: 0;
+    right: 0;
+  }
+  .absolute.amended-with-ancestor::before {
+    content: '.parent {\A    position: relative;\A } \A\A.target { \A    position: absolute;\A    top: 0;\A    right: 0;\A }';
+    white-space: pre-wrap;
+  }
+  
+  .absolute.relative-comparison { position: relative; }
+  .absolute.relative-comparison .target { 
+    left: 100px; 
+  }
+  .absolute.relative-comparison::before {
+    content: 'left: 100px';
+  }
+  
+  #fixed .target {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+  #fixed::before {
+    content: 'bottom: 0; right: 0;';
+  }
+  
+  #fixed .mystery:hover::before {
+    content: "I have been positioned as 'fixed', so am fixed wherever I am styled in the CSS. In this particular case, I have been fixed to the bottom right hand corner of the screen, which is where you will always see me.";
+    right: 50%;
+    bottom: 50%;
+    left: -500px;
+    border-radius: 20px 20px 0 20px;
+  }
+  
+  #sticky .target {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+  }
+  #sticky::before {
+    content: 'bottom: 0; left: 0;';
+  }
+  #sticky .target::after {
+    content: 'watch as you scroll up from here';
+    width: 160px;
+    top: 75%;
+    left: 75%;
+    border-radius: 0 20px 20px 20px;
+  }
+  
+  /* STICKY HEADERS */
+  /* h3 {
+    display: inline-block;
+    position: sticky;
+    top: 0;
+    background: white;
+    line-height: 50px;
+  } */
+  
+  

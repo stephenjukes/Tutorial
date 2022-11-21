@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Display, Visibility and Position</title>
+        <link rel="stylesheet" href="displayVisibilityPosition.css">
+    </head>
+    <body>
+        <h1>Display, Visibility and Position</h1>
+
+        <section id="display">
+          <h2>Display</h2>
+          
+          <p>
+            It is worth narrowing the screen sufficiently to see how this affects displays: 'inline-block', 'inline' and 'flex'.
+          </p>
+          
+          <figure id="block">
+            <h3>Block</h3>
+            <figcaption>
+              Block level elements always start a new line. Elements which default to a display of 'block' include: 'section', 'article', 'div', 'table', 'p', 'ul', 'ol', and 'li'
+            </figcaption>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </figure>
+          
+          <figure id="inline-block">
+            <h3>Inline-block</h3>
+            <figcaption>
+              Inline-block elements are allowed to sit alongside each other, and wrap to the next line if insufficient space.
+            </figcaption>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </figure>
+          
+          <figure id="inline">
+            <h3>Inline</h3>
+            <figcaption>
+              Unlike block elements, Inline elements work with text, and can be split over lines. Elements which default to a display of 'inline' include: 'a', 'code', 'span', 'strong', 'em', 'i', 'input' and 'button'
+            </figcaption>
+            <ul>
+              <li>Inline styling only makes sense with text</li>
+              <li>Inline styling only makes sense with text</li>
+              <li>Inline styling only makes sense with text</li>
+            </ul>
+          </figure>
+          
+          <figure id="flex">
+            <h3>Flex</h3>
+            <figcaption>
+              Flex is used to help the layout respond to device width and will be discussed in detail in a subsequent lesson. However, here is a quick idea on what can be achieved with this display.
+            </figcaption>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </figure>
+          
+          <figure id="none">
+            <h3>None</h3>
+            <figcaption>
+              A display of 'none' removes the element from the DOM. This is apparent by the fact that the green element has no awareness of the amber one, and has therefore taken its place. This element is also greyed out when inspecting using dev tools.
+            </figcaption>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </figure>
+        </section>
+        
+        <section id="visibility">
+          <h2>Visibility</h2>
+          
+          <article>
+            <h3>Hidden</h3>
+            <figure id="hidden">
+              <figcaption>
+                While a 'visibility of hidden' might seem to be the same as a 'display of none', it is apparent below that the element still exists as part of the DOM, and other elements are aware of its existence when positioning themselves.
+              </figcaption>
+              <ul>
+                <li></li>
+                <li class="target"></li>
+                <li></li>
+              </ul>
+            </figure>
+          </article>
+        </section>
+        
+        <section id="position">
+          <h2>Position</h2>
+          
+          <article>
+            <h3>Static</h3>
+            <figure id="static">
+              <figcaption>
+                This is the default position. Since the position is static, attempts to move the target has no effect.
+              </figcaption>
+              <ul>
+                <li></li>
+                <li class="target"></li>
+                <li></li>
+              </ul>
+            </figure>
+          </article>
+          
+          <article>
+            <h3>Relative</h3>
+            <figure id="relative">
+              <figcaption>
+                In order to move the target, a position other that 'static' needs to be applied. In this case, the  'relative' position starts in its expected position, and the amendment now takes effect. Compare this with the 
+                <a href="#relative-comparison">absolute equivalent</a>
+                below.
+              </figcaption>
+              <ul>
+                <li></li>
+                <li class="target"></li>
+                <li></li>
+              </ul>
+            </figure>
+          </article>
+          
+          <article id="absolute">
+            <h3>Absolute</h3>
+            <figure class="absolute no-amendment">
+              <h4>Absolute - No position amendment</h4>
+              <figcaption>
+                Applying an 'absolute' position to an element takes it 'out of the flow of the DOM'. This basically means that other elements aren't aware of its existence, which is is why the green element has taken its position as if the target element wasn't there, (ie: immediately after the red one). If you look closely, you can just about see the target border behind the green element.
+              </figcaption>
+              <ul>
+                <li></li>
+                <li class="target"></li>
+                <li></li>
+              </ul>
+            </figure>
+            
+            <figure class="absolute amended-no-ancestor">
+              <h4>Absolute - Position amendment and no positioned ancestor</h4>
+              <figcaption>
+                What's going on here? This time, the target is not hidden behind the green element, it's not even in this box! Since the box isn't positioned, (as well as its ancestors) the target is positioned in accordance with the body. Have a look at the 'top right' hand corner of the screen, and you'll see where this target ended up.
+              </figcaption>
+              <ul>
+                <li></li>
+                <li class="mystery target">
+                </li>
+                <li></li>
+              </ul>
+            </figure>
+            
+            <figure class="absolute amended-with-ancestor">
+              <h4>Absolute - Position amendment and positioned ancestor</h4>
+              <figcaption>
+                That's better! Now that the target's parent has been positioned explicitly, the positioning can now take effect in the context of the parent. The target now appears in the 'top right' hand corner of the box, as you would expect.
+              </figcaption>
+              <ul>
+                <li></li>
+                <li class="target"></li>
+                <li></li>
+              </ul>
+            </figure>
+            
+            <figure id="relative-comparison" class="absolute relative-comparison">
+              <h4>Absolute - Position amendment comparison with Relative</h4>
+              <figcaption>
+                Compare this with the 
+                <a href="#relative">target positioned as 'relative'</a>
+                above, which is also given a left margin of 100px. Notice that while the relative target is way clear of its siblings, this target doesn't quite manage to clear them. The reason is that while the relative target starts its margin from its original position, (the padding of its parent into accout) this absolute target does not take its parent's padding into account, starting right at the left hand border.
+              </figcaption>
+              <ul>
+                <li></li>
+                <li class="target"></li>
+                <li></li>
+              </ul>
+            </figure>
+          </article>
+        
+          <article>
+            <h3>Fixed</h3>
+            <figure id="fixed">
+              <figcaption>
+                Similar to the 'absolute' positioned target above whose parent had no explicit positioning, this target also finds itself, not positioned in the context of its parent, but in the context of the viewport, and is the target that can be found in the bottom right hand corner of the screen. Unlike the other target, this target is fixed to the same location of the screen, and is not scrolled in and out like other elements.
+              </figcaption>
+              <ul>
+                <li></li>
+                <li class="mystery target">      
+                </li>
+                <li></li>
+              </ul>
+            </figure>
+          </article>
+          
+          <article>
+            <h3>Sticky</h3>
+            <figure id="sticky">
+              <figcaption>
+                Finally, we have our 'sticky' position, which remains within the confines of its parent, but then sticks to a determined position whenever possible. Uncomment the 'Sticky Headers' in the CSS as an example of how this might be used.
+              </figcaption>
+              <ul>
+                <li></li>
+                <li></li>
+                <li class="annotated target"></li>
+              </ul>
+            </figure>
+          </article>
+        </section>
+    </body>
+</html>
