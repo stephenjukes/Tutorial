@@ -28,7 +28,15 @@ h3 {
 }
 
 h4 {
-  margin: 10 0 5px;
+  margin: 10px 0 5px;
+}
+
+h5 {
+  margin: 5px 0 3px;
+}
+
+h6 {
+  margin: 3px 0 2px;
 }
 
 p {
@@ -39,6 +47,14 @@ p {
 ul,
 ol {
   padding: 15px 0 15px 25px;
+}
+
+table, th, td {
+  border:1px solid black;
+}
+
+th, td {
+  padding: 5px 10px;
 }
 
 code {
