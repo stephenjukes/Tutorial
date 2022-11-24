@@ -95,7 +95,7 @@ figcaption {
 
 #hex-sample {
   display: flex;
-  margin: auto;
+  justify-content: center;
 }
 
 #hex-sample div {
