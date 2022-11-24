@@ -1,111 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HTML</title>
-        <link rel="stylesheet" href="../main.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="color.css">
+</head>
+<body>
+    <h1>Color</h1>
 
-    <style>
-        table, th, td {
-            border:1px solid black;
-        }
+    <h2>Introduction</h2>
 
-        input {
-            display: block;
-            margin: 5px 0 15px 0;
-        }
-    </style>
-
-    <body>
-        <h1>HTML</h1>
-
-        <h2>Headings</h2>
-
-        You've already seen two headings at work. Here are the other four -
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
-
-        <h2>Paragraphs</h2>
-
-        <p>
-        This is a paragraph. Paragaraphs are styled with margins to separate them from other paragraphs. Reduce the width of you browser so that this sentence falls on multiple lines so you can see how the paragraph tag works
-        </p>
-
-        <p>
-        This is a paragraph. Paragaraphs are styled with margins to separate them from other paragraphs. Reduce the width of you browser so that this sentence falls on multiple lines so you can see how the paragraph tag works
-        </p>
-
-        <h2>Lists</h2>
-
-        <h3>Ordered</h3>
-
-        <ol>
-        <li>Items</li>
-        <li>are</li>
-        <li>numbers</li>
-        </ol>
-
-        <h3>Unordered</h3>
-
+    <ul>
+    <li>Hex colors are created using a <code>#</code> symbol, followed by 6 digits</li>
+    <li>The digits represent 3 pairs of digits, with each pair representing the colors: red, green and blue, in that order</li>
+    <li>Each pair represents how much of each primary color should be included as part of the composite color, and should be thought of as as mixture of light, as opposed to of pigments such as paint. Hence:
         <ul>
-        <li>Items</li>
-        <li>are</li>
-        <li>bullets</li>
+        <li>red and green produces yellow, not brown</li>
+        <li>no contribution from each color produces black (absence of light)</li>
+        <li>full contribution from each color produces white (natural light)</li>
         </ul>
+    </li>
+    <li>
+        Each pair is written in hexidecimal, (base 16)
+        <ul>
+        <li>Being larger than the decimal system we are used to working with, the hexidecimal system requires further digits, and the letters 'a' to 'f' are used for this purpose</li>
+        </ul>
+    </li>
+    </ul>
 
-        <h2>Tables</h2>
 
-        <table>
-        <tr>
-            <th>Colour 1</th>
-            <th>Colour 2</th>
-            <th>Result</th>
-        </tr>
-        <tr>
-            <td>blue</td>
-            <td>yellow</td>
-            <td>green</td>
-        </tr>
-        <tr>
-            <td>blue</td>
-            <td>red</td>
-            <td>purple</td>
-        </tr>
-        <tr>
-            <td>red</td>
-            <td>yellow</td>
-            <td>orange</td>
-        </tr>
-        </table>
+    <figure>
+    <div id="hex-sample">
+        <div>#</div>
+        <div class="hex-pair">01</div>
+        <div class="hex-pair">56</div>
+        <div class="hex-pair">ef</div>
+    </div>
+    <figcaption>Hex color example</figcaption>
+    </figure>
 
-        <h2>Input</h2>
+    <p>
+    The following shows some converstions from decimal to hexidecimal
+    </p>
 
-        button <input type="button" value="button">
-        checkbox <input type="checkbox">
-        color <input type="color">
-        date <input type="date">
-        datetime-local <input type="datetime-local">
-        email <input type="email">
-        file <input type="file">
-        hidden <input type="hidden">
-        image <input type="image">
-        month <input type="month">
-        number <input type="number">
-        password <input type="password">
-        radio <input type="radio">
-        range <input type="range">
-        reset <input type="reset">
-        search <input type="search">
-        submit <input type="submit">
-        tel <input type="tel">
-        text <input type="text"> (default value)
-        time <input type="time">
-        url <input type="url">
-        week <input type="week">
-    </body>
+    <ul id="hex-conversions">
+    <li>
+        <span>0</span>
+        <span>0</span>
+    </li>
+    <li>
+        <span>1</span>
+        <span>1</span>
+    </li>
+    <li>
+        <span>2</span>
+        <span>2</span>
+    </li>
+    <li>
+        <span>..</span>
+        <span>..</span>
+    </li>
+    <li>
+        <span>9</span>
+        <span>9</span>
+    </li>
+    <li>
+        <span>10</span>
+        <span>a</span>
+    </li>
+    <li>
+        <span>11</span>
+        <span>b</span>
+    </li>
+    <li>
+        <span>12</span>
+        <span>c</span>
+    </li>
+    <li>
+        <span>13</span>
+        <span>d</span>
+    </li>
+    <li>
+        <span>14</span>
+        <span>e</span>
+    </li>
+    <li>
+        <span>15</span>
+        <span>f</span>
+        <span>(last digit)</span>
+    </li>
+    <li>
+        <span>16</span>
+        <span>10</span>
+        <span>(base^1)</span>
+    </li>
+    <li>
+        <span>17</span>
+        <span>11</span>
+    </li>
+    <li>
+        <span>18</span>
+        <span>12</span>
+    </li>
+    <li>
+        <span>..</span>
+        <span>..</span>
+    </li>
+    <li>
+        <span>25</span>
+        <span>19</span>
+    </li>
+    <li>
+        <span>26</span>
+        <span>1a</span>
+    </li>
+    <li>
+        <span>27</span>
+        <span>1b</span>
+    </li>
+    <li>
+        <span>..</span>
+        <span>..</span>
+    </li>
+    <li>
+        <span>31</span>
+        <span>1f</span>
+    </li>
+    <li>
+        <span>32</span>
+        <span>20</span>
+        <span>(2x16)</span>
+    </li>
+    <li>
+        <span>23</span>
+        <span>21</span>
+    </li>
+    <li>
+        <span>..</span>
+        <span>..</span>
+    </li>
+    <li>
+        <span>48</span>
+        <span>30</span>
+        <span>(3x16)</span>
+    </li>
+    <li>
+        <span>64</span>
+        <span>40</span>
+        <span>(4x16)</span>
+    </li>
+    <li>
+        <span>80</span>
+        <span>50</span>
+        <span>(5x16)</span>
+    </li>
+    <li>
+        <span>..</span>
+        <span>..</span>
+    </li>
+    <li>
+        <span>144</span>
+        <span>90</span>
+    </li>
+    <li>
+        <span>160</span>
+        <span>a0</span>
+    </li>
+    <li>
+        <span>176</span>
+        <span>b0</span>
+    </li>
+    <li>
+        <span>182</span>
+        <span>c0</span>
+    </li>
+    <li>
+        <span>..</span>
+        <span>..</span>
+    </li>
+    <li>
+        <span>240</span>
+        <span>f0</span>
+    </li>
+    <li>
+        <span>241</span>
+        <span>f1</span>
+    </li>
+    <li>
+        <span>242</span>
+        <span>f2</span>
+    </li>
+    <li>
+        <span>..</span>
+        <span>..</span>
+    </li>
+    <li>
+        <span>254</span>
+        <span>fe</span>
+    </li>
+    <li>
+        <span>255</span>
+        <span>ff</span>
+        <span>(both full)</span>
+    </li>
+    <li>
+        <span>256</span>
+        <span>100</span>
+        <span>(base^2)</span>
+    </li>
+    </ul>
+
+    <h2>Examples of Producting Color</h2>
+
+    <p>
+    <i>tap or hover on color samples to view the hex or rgb color used to generate it</i>
+    </p>
+
+    <section id="primary-colors">
+        <h2>Primary Colors</h2>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <section id="mixed-colors">
+        <h2>Mixed Colors</h2>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <section id="grayscale">
+        <h2>Grayscale</h2>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <section id="light-to-dark">
+        <h2>Light to Dark</h2>
+        <section id="dark-to-medium">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        
+        <section id="medium-to-light">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+    </section>
+
+    <section id="rgb">
+    <h2>RGB</h2>
+    <div></div>
+    <div></div>
+    <div></div>
+    </section>
+
+    <section id="rgba">
+    <h2>RGBa</h2>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    </section>
+</body>
 </html>
