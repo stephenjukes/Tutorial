@@ -1,0 +1,13 @@
+   001	p {color:black;}
+   002	div p {color:purple;}
+   011	.div1 p {color:orange;}
+   021	.div1 p.p1 {color:red;}
+   012	div p.p1 {color:green;}
+   101	#nav li {color:green;}
+   002	ul li {color:orange;}
+   002	ul > li {color:brown;}
+   121	#nav li:first-child {color:purple;}
+   003 	div div span {color:red;}
+   102	#wrapper div span {color:green;}
+   112	#main div span.yikes {color:gold;} 
+   111	#wrapper span.yikes {color:blue;}

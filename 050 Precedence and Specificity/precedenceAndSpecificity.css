@@ -1,27 +1,12 @@
-h3, p {
-    margin: 0;
-  }
-  
-  li {
-    margin: 20px 0;
-  }
-  
-  code {
-    display: inline-block;
-    background: #eee;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 2px;
-  }
-  
-  * { color: #444; }
-  li { color: BurlyWood; }
-  ul li { color: Chocolate; }
-  .my-class {color: CadetBlue; }
-  ul li.my-class {color: DarkCyan; }
-  #my-id { color: LightGreen; }
-  .unordered-list-class #my-id { color: Green; }
-  .my-important-class { color: red !important; }
-  
-  /* li { color: DarkOrange; } */
-  
+h1 { color: black; }
+
+* { color: #444; }
+li { color: BurlyWood; }
+ul li { color: Chocolate; }
+.my-class {color: CadetBlue; }
+ul li.my-class {color: DarkCyan; }
+#my-id { color: LightGreen; }
+.unordered-list-class #my-id { color: Green; }
+.my-important-class { color: red !important; }
+
+/* li { color: DarkOrange; } */

@@ -4,9 +4,6 @@ body {
     background-size: 600px;
   }
   
-  h1, h2 {
-  }
-  
   h2 {
     margin: 25px 0 10px;
   }
@@ -30,15 +27,3 @@ body {
     border-radius: 10px 20px 40px 80px;
     box-shadow: 10px 10px 10px 10px #222;
   }
-  
-  code {
-    display: inline-block;
-    padding: 5px 10px;
-  /*   notice that this collapses with its parent's padding */
-    margin: 5px; 
-    background: #ddd;
-    border: 3px solid #666;
-    border-radius: 30px;
-  }
-  
-  

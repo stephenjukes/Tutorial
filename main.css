@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    width: 100%;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin: 40px 0 10px;
+  width: 100%;
+}
+
+h3 {
+  margin: 20px 0 10px;
+}
+
+h4 {
+  margin: 10 0 5px;
+}
+
+p {
+  line-height: 20px;
+  margin: 15px 0;
+}
+
+ul,
+ol {
+  padding: 15px 0 15px 25px;
+}
+
+code {
+  display: inline-block;
+  padding: 2px 6px;
+  /*   notice that this collapses with its parent's padding */
+  margin: 5px; 
+  background: #ddd;
+  border: 2px solid #666;
+  border-radius: 30px;
+}
+
+/* section
+figure
+figcaption
+article */

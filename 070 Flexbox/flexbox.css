@@ -1,9 +1,6 @@
 div {
     border: 1px solid blue;
 }
-h4, p {
-    margin: 5px 0;
-}
 .container {
     position: relative;
     margin-top: 3rem;
