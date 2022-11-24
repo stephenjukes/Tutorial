@@ -1,261 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color</title>
-    <link rel="stylesheet" href="../main.css">
-    <link rel="stylesheet" href="color.css">
-</head>
-<body>
-    <h1>Color</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Color</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="stylesheet" href="color.css">
+    </head>
+    <body>
+        <h1>Color</h1>
 
-    <h2>Introduction</h2>
+        <h2>Introduction</h2>
 
-    <ul>
-    <li>Hex colors are created using a <code>#</code> symbol, followed by 6 digits</li>
-    <li>The digits represent 3 pairs of digits, with each pair representing the colors: red, green and blue, in that order</li>
-    <li>Each pair represents how much of each primary color should be included as part of the composite color, and should be thought of as as mixture of light, as opposed to of pigments such as paint. Hence:
         <ul>
-        <li>red and green produces yellow, not brown</li>
-        <li>no contribution from each color produces black (absence of light)</li>
-        <li>full contribution from each color produces white (natural light)</li>
+        <li>Hex colors are created using a <code>#</code> symbol, followed by 6 digits</li>
+        <li>The digits represent 3 pairs of digits, with each pair representing the colors: red, green and blue, in that order</li>
+        <li>Each pair represents how much of each primary color should be included as part of the composite color, and should be thought of as as mixture of light, as opposed to of pigments such as paint. Hence:
+            <ul>
+            <li>red and green produces yellow, not brown</li>
+            <li>no contribution from each color produces black (absence of light)</li>
+            <li>full contribution from each color produces white (natural light)</li>
+            </ul>
+        </li>
+        <li>
+            Each pair is written in hexidecimal, (base 16)
+            <ul>
+            <li>Being larger than the decimal system we are used to working with, the hexidecimal system requires further digits, and the letters 'a' to 'f' are used for this purpose</li>
+            </ul>
+        </li>
         </ul>
-    </li>
-    <li>
-        Each pair is written in hexidecimal, (base 16)
-        <ul>
-        <li>Being larger than the decimal system we are used to working with, the hexidecimal system requires further digits, and the letters 'a' to 'f' are used for this purpose</li>
+
+        <figure>
+        <div id="hex-sample">
+            <div>#</div>
+            <div class="hex-pair">01</div>
+            <div class="hex-pair">56</div>
+            <div class="hex-pair">ef</div>
+        </div>
+        <figcaption>Hex color example</figcaption>
+        </figure>
+
+        <p>
+        The following shows some converstions from decimal to hexidecimal
+        </p>
+
+        <ul id="hex-conversions">
+        <li>
+            <span>0</span>
+            <span>0</span>
+        </li>
+        <li>
+            <span>1</span>
+            <span>1</span>
+        </li>
+        <li>
+            <span>2</span>
+            <span>2</span>
+        </li>
+        <li>
+            <span>..</span>
+            <span>..</span>
+        </li>
+        <li>
+            <span>9</span>
+            <span>9</span>
+        </li>
+        <li>
+            <span>10</span>
+            <span>a</span>
+        </li>
+        <li>
+            <span>11</span>
+            <span>b</span>
+        </li>
+        <li>
+            <span>12</span>
+            <span>c</span>
+        </li>
+        <li>
+            <span>13</span>
+            <span>d</span>
+        </li>
+        <li>
+            <span>14</span>
+            <span>e</span>
+        </li>
+        <li>
+            <span>15</span>
+            <span>f</span>
+            <span>(last digit)</span>
+        </li>
+        <li>
+            <span>16</span>
+            <span>10</span>
+            <span>(base^1)</span>
+        </li>
+        <li>
+            <span>17</span>
+            <span>11</span>
+        </li>
+        <li>
+            <span>18</span>
+            <span>12</span>
+        </li>
+        <li>
+            <span>..</span>
+            <span>..</span>
+        </li>
+        <li>
+            <span>25</span>
+            <span>19</span>
+        </li>
+        <li>
+            <span>26</span>
+            <span>1a</span>
+        </li>
+        <li>
+            <span>27</span>
+            <span>1b</span>
+        </li>
+        <li>
+            <span>..</span>
+            <span>..</span>
+        </li>
+        <li>
+            <span>31</span>
+            <span>1f</span>
+        </li>
+        <li>
+            <span>32</span>
+            <span>20</span>
+            <span>(2x16)</span>
+        </li>
+        <li>
+            <span>23</span>
+            <span>21</span>
+        </li>
+        <li>
+            <span>..</span>
+            <span>..</span>
+        </li>
+        <li>
+            <span>48</span>
+            <span>30</span>
+            <span>(3x16)</span>
+        </li>
+        <li>
+            <span>64</span>
+            <span>40</span>
+            <span>(4x16)</span>
+        </li>
+        <li>
+            <span>80</span>
+            <span>50</span>
+            <span>(5x16)</span>
+        </li>
+        <li>
+            <span>..</span>
+            <span>..</span>
+        </li>
+        <li>
+            <span>144</span>
+            <span>90</span>
+        </li>
+        <li>
+            <span>160</span>
+            <span>a0</span>
+        </li>
+        <li>
+            <span>176</span>
+            <span>b0</span>
+        </li>
+        <li>
+            <span>182</span>
+            <span>c0</span>
+        </li>
+        <li>
+            <span>..</span>
+            <span>..</span>
+        </li>
+        <li>
+            <span>240</span>
+            <span>f0</span>
+        </li>
+        <li>
+            <span>241</span>
+            <span>f1</span>
+        </li>
+        <li>
+            <span>242</span>
+            <span>f2</span>
+        </li>
+        <li>
+            <span>..</span>
+            <span>..</span>
+        </li>
+        <li>
+            <span>254</span>
+            <span>fe</span>
+        </li>
+        <li>
+            <span>255</span>
+            <span>ff</span>
+            <span>(both full)</span>
+        </li>
+        <li>
+            <span>256</span>
+            <span>100</span>
+            <span>(base^2)</span>
+        </li>
         </ul>
-    </li>
-    </ul>
 
+        <h2>Examples of Producting Color</h2>
 
-    <figure>
-    <div id="hex-sample">
-        <div>#</div>
-        <div class="hex-pair">01</div>
-        <div class="hex-pair">56</div>
-        <div class="hex-pair">ef</div>
-    </div>
-    <figcaption>Hex color example</figcaption>
-    </figure>
+        <p>
+        <i>tap or hover on color samples to view the hex or rgb color used to generate it</i>
+        </p>
 
-    <p>
-    The following shows some converstions from decimal to hexidecimal
-    </p>
+        <section id="primary-colors">
+            <h2>Primary Colors</h2>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
 
-    <ul id="hex-conversions">
-    <li>
-        <span>0</span>
-        <span>0</span>
-    </li>
-    <li>
-        <span>1</span>
-        <span>1</span>
-    </li>
-    <li>
-        <span>2</span>
-        <span>2</span>
-    </li>
-    <li>
-        <span>..</span>
-        <span>..</span>
-    </li>
-    <li>
-        <span>9</span>
-        <span>9</span>
-    </li>
-    <li>
-        <span>10</span>
-        <span>a</span>
-    </li>
-    <li>
-        <span>11</span>
-        <span>b</span>
-    </li>
-    <li>
-        <span>12</span>
-        <span>c</span>
-    </li>
-    <li>
-        <span>13</span>
-        <span>d</span>
-    </li>
-    <li>
-        <span>14</span>
-        <span>e</span>
-    </li>
-    <li>
-        <span>15</span>
-        <span>f</span>
-        <span>(last digit)</span>
-    </li>
-    <li>
-        <span>16</span>
-        <span>10</span>
-        <span>(base^1)</span>
-    </li>
-    <li>
-        <span>17</span>
-        <span>11</span>
-    </li>
-    <li>
-        <span>18</span>
-        <span>12</span>
-    </li>
-    <li>
-        <span>..</span>
-        <span>..</span>
-    </li>
-    <li>
-        <span>25</span>
-        <span>19</span>
-    </li>
-    <li>
-        <span>26</span>
-        <span>1a</span>
-    </li>
-    <li>
-        <span>27</span>
-        <span>1b</span>
-    </li>
-    <li>
-        <span>..</span>
-        <span>..</span>
-    </li>
-    <li>
-        <span>31</span>
-        <span>1f</span>
-    </li>
-    <li>
-        <span>32</span>
-        <span>20</span>
-        <span>(2x16)</span>
-    </li>
-    <li>
-        <span>23</span>
-        <span>21</span>
-    </li>
-    <li>
-        <span>..</span>
-        <span>..</span>
-    </li>
-    <li>
-        <span>48</span>
-        <span>30</span>
-        <span>(3x16)</span>
-    </li>
-    <li>
-        <span>64</span>
-        <span>40</span>
-        <span>(4x16)</span>
-    </li>
-    <li>
-        <span>80</span>
-        <span>50</span>
-        <span>(5x16)</span>
-    </li>
-    <li>
-        <span>..</span>
-        <span>..</span>
-    </li>
-    <li>
-        <span>144</span>
-        <span>90</span>
-    </li>
-    <li>
-        <span>160</span>
-        <span>a0</span>
-    </li>
-    <li>
-        <span>176</span>
-        <span>b0</span>
-    </li>
-    <li>
-        <span>182</span>
-        <span>c0</span>
-    </li>
-    <li>
-        <span>..</span>
-        <span>..</span>
-    </li>
-    <li>
-        <span>240</span>
-        <span>f0</span>
-    </li>
-    <li>
-        <span>241</span>
-        <span>f1</span>
-    </li>
-    <li>
-        <span>242</span>
-        <span>f2</span>
-    </li>
-    <li>
-        <span>..</span>
-        <span>..</span>
-    </li>
-    <li>
-        <span>254</span>
-        <span>fe</span>
-    </li>
-    <li>
-        <span>255</span>
-        <span>ff</span>
-        <span>(both full)</span>
-    </li>
-    <li>
-        <span>256</span>
-        <span>100</span>
-        <span>(base^2)</span>
-    </li>
-    </ul>
+        <section id="mixed-colors">
+            <h2>Mixed Colors</h2>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
 
-    <h2>Examples of Producting Color</h2>
-
-    <p>
-    <i>tap or hover on color samples to view the hex or rgb color used to generate it</i>
-    </p>
-
-    <section id="primary-colors">
-        <h2>Primary Colors</h2>
-        <div></div>
-        <div></div>
-        <div></div>
-    </section>
-
-    <section id="mixed-colors">
-        <h2>Mixed Colors</h2>
-        <div></div>
-        <div></div>
-        <div></div>
-    </section>
-
-    <section id="grayscale">
-        <h2>Grayscale</h2>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </section>
-
-    <section id="light-to-dark">
-        <h2>Light to Dark</h2>
-        <section id="dark-to-medium">
+        <section id="grayscale">
+            <h2>Grayscale</h2>
             <div></div>
             <div></div>
             <div></div>
@@ -273,13 +251,57 @@
             <div></div>
             <div></div>
         </section>
-        
-        <section id="medium-to-light">
+
+        <section id="light-to-dark">
+            <h2>Light to Dark</h2>
+            <section id="dark-to-medium">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+            
+            <section id="medium-to-light">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+        </section>
+
+        <section id="rgb">
+            <h2>RGB</h2>
             <div></div>
             <div></div>
             <div></div>
-            <div></div>
-            <div></div>
+        </section>
+
+        <section id="rgba">
+            <h2>RGBa</h2>
             <div></div>
             <div></div>
             <div></div>
@@ -292,28 +314,7 @@
             <div></div>
             <div></div>
         </section>
-    </section>
 
-    <section id="rgb">
-    <h2>RGB</h2>
-    <div></div>
-    <div></div>
-    <div></div>
-    </section>
-
-    <section id="rgba">
-    <h2>RGBa</h2>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    </section>
-</body>
+        <script src="color.js"></script>
+    </body>
 </html>
