@@ -1,4 +1,4 @@
-    figure {
+  figure {
     margin: 20px;
     padding: 20px;
     border: 1px solid #aaa;
@@ -11,6 +11,7 @@
     background: #eee;
     border: 2px solid #aaa;
     padding: 5px 10px;
+    margin-bottom: 10px;
     border-radius: 15px;
   }
   
@@ -20,6 +21,10 @@
   
   figcaption {
     margin: 10px 0;
+  }
+
+  ul {
+    padding: 15px 0;
   }
   
   li {
@@ -48,8 +53,8 @@
   
   .annotated::after,
   .mystery:hover::before {
-    position: absolute ;
-    display: inline-block;
+    position: absolute;
+    /* display: inline-block; */
     font: 14px/20px serif;
     background: #eee;
     border: 1px solid #ccc;
@@ -126,7 +131,7 @@
     content: "I am absolutely positioned, but none of my ancestors have been given an explicit position. My 'parent' is therefore assumed to be the html 'body', and have therefore been positioned to the top right hand corner of the 'body', in accordance with my styling.";
     top: 50%;
     right: 50%;
-    left: -500px;
+    left: -400px;
     border-radius: 20px 0 20px 20px;
   }
   
@@ -162,7 +167,7 @@
     content: "I have been positioned as 'fixed', so am fixed wherever I am styled in the CSS. In this particular case, I have been fixed to the bottom right hand corner of the screen, which is where you will always see me.";
     right: 50%;
     bottom: 50%;
-    left: -500px;
+    left: -400px;
     border-radius: 20px 20px 0 20px;
   }
   
