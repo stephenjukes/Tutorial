@@ -44,6 +44,11 @@ p {
   margin: 15px 0;
 }
 
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
 ul,
 ol {
   padding: 15px 0 15px 25px;
