@@ -63,8 +63,7 @@ th, td {
 }
 
 pre,
-code, 
-figure::before {
+code {
   background: #ddd;
   border: 2px solid #666;
   border-radius: 10px;
@@ -76,8 +75,7 @@ pre {
   line-height: 20px;
 }
 
-code,
-figure::before {
+code {
   display: inline-block;
   margin: 5px;
   padding: 2px 6px;
