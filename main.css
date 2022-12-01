@@ -8,10 +8,15 @@ body {
     max-width: 800px;
     margin: auto;
     padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 section {
     width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Times New Roman', Times, serif;
 }
 
 h1 {
@@ -52,6 +57,14 @@ a {
 ul,
 ol {
   padding: 15px 0 15px 25px;
+}
+
+li {
+  padding: 5px 0;
+}
+
+li li {
+  padding: 0;
 }
 
 table, th, td {
