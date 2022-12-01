@@ -12,10 +12,9 @@ figcaption {
 figure::before, 
 code {
   width: fit-content;
-  padding: 2px 5px;
-  background: #eee;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  background: #ddd;
+  border: 2px solid #666;
+  border-radius: 10px;
 }
 
 figure::before {
