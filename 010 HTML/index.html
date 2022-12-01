@@ -18,69 +18,299 @@
     <body>
         <h1>HTML</h1>
 
-        <h2>Headings</h2>
-
-        You've already seen two headings at work. Here are the other four -
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
-
-        <h2>Paragraphs</h2>
-
-        <p>
-        This is a paragraph. Paragaraphs are styled with margins to separate them from other paragraphs. Reduce the width of you browser so that this sentence falls on multiple lines so you can see how the paragraph tag works
-        </p>
-
-        <p>
-        This is a paragraph. Paragaraphs are styled with margins to separate them from other paragraphs. Reduce the width of you browser so that this sentence falls on multiple lines so you can see how the paragraph tag works
-        </p>
-
-        <h2>Lists</h2>
-
-        <h3>Ordered</h3>
-
-        <ol>
-        <li>Items</li>
-        <li>are</li>
-        <li>numbers</li>
-        </ol>
-
-        <h3>Unordered</h3>
-
+        <h2>Introduction</h2>
+        
         <ul>
-        <li>Items</li>
-        <li>are</li>
-        <li>bullets</li>
+          <li>
+              HTML stands for 
+              <strong>H</strong>yper
+              <strong>T</strong>ext 
+              <strong>M</strong>arkup 
+              <strong>L</strong>anguage.
+          </li>
+          <li>
+            It is responsible for providing the content and structure for your web page
+          </li>
+          <li>
+            It consists of <strong>elements</strong> which implies what its content represents
+          </li>
+          <li>
+            Different elements are given their own default styling to help fulfil their intended role, eg:
+            <ul>
+              <li>
+                <strong>
+                  strong
+                </strong> 
+                elements are bold and naturally appears as part of a sentence
+              </li>
+              <li>
+                list items (like this one) are indented, preceded by a bullet point and given its own line
+              </li>
+            </ul>
+          </li>
+          <li>
+            Default styling can be overridden, but the correct element should still be used to provide meaning to the content it represents
+          </li>
         </ul>
-
+        
+        <section>
+          <h3>Basic elements</h3>
+          
+          <p>
+            Elements generally consist of an opening and closing tag, with the displayed content in between. The opening and closing tag share the same name, but the closing tag is preceded by a <code>/</code>. Tags are themselves enclosed between angle brackets.
+          </p>
+          <figure>
+            <figcaption> 
+              Here is the general format of an element
+            </figcaption>
+            <pre>
+              &lt;tag&gt;
+                Content
+              &lt;/tag&gt;
+            </pre>
+          </figure>
+          
+          <figure>
+            <figcaption>
+              which can either be formatted on their own lines
+            </figcaption>
+            <pre>
+              &lt;h1&gt;
+                HTML
+              &lt;/h1&gt;
+            </pre>
+          </figure>
+          
+          <figure>
+            <figcaption>
+              or on the same line, depending on whatever is more readable.
+            </figcaption>
+            <pre>
+              &lt;h1&gt;HTML&lt;/h1&gt;
+            </pre>
+          </figure>
+            
+        </section>
+        
+        <section>
+          <h3>Attributes</h3>
+          
+          <p>
+            Elements can also have attributes, which provide further information about the element. Attributes are found within the opening tag, after the tag name, and consist of:
+          </p>
+          
+          <ul>
+            <li>the attribute name</li>
+            <li>an <code>=</code> symbol</li>
+            <li>a value enclosed by speech marks</li>
+          </ul>
+        
+          <figure>
+            <figcaption>
+              Here is the general format of an element with attribute
+            </figcaption>
+            <pre>
+              &lt;tag attribute="value"&gt;
+                Displayed content
+              &lt;/tag&gt;
+            </pre>
+          </figure>
+          
+          <figure>
+            <figcaption>
+             and an <strong>anchor</strong> tag with an attribute showing where the link should go:
+            </figcaption>
+            <pre>
+              &lt;a href="www.google.com"&gt;
+                Click to Google
+              &lt;/a&gt;
+            </pre>
+          </figure>
+          
+          <figure>
+            <figcaption>
+              and an example of a <strong>paragraph</strong> tag with multiple attributes
+            </figcaption>
+            <pre>
+              &lt;p 
+                class="myRedParagraph" 
+                style:"color:red"
+              &gt;
+                Look, I'm red!
+              &lt;/p&gt;
+            </pre>
+          </figure>
+        </section>
+        
+        <section>
+          <h3>Self-closing tags</h3>
+          
+          <p>
+            Some elments are self-closing, which means that they do not require a closing tag. These elments do not have 'content' in the same way as elements that require a closing tag, but content and other information will generally be provided via one or more attributes. 
+          </p>
+          
+          <figure>
+            <figcaption>
+              This is the general format of a self-closing with an attribute
+            </figcaption>
+            <pre>
+              &lt;tag attribute="value"&gt;
+            </pre>
+          </figure>
+          
+          <figure>
+            <figcaption>
+              and an image whose content is derived by its attribute
+            </figcaption>
+            <pre>
+              &lt;img src="myImage.jpg"&gt;
+            </pre>
+          </figure>
+          
+          <figure>
+            <figcaption>
+              and a button with two attributes and whose content is also derived by its 'value' attribute
+            </figcaption>
+            <pre>
+              &lt;input 
+                type="button" 
+                value="Click me"
+              &gt;
+            </pre>
+          </figure>
+        
+        </section>
+        
+        <section>
+          <h3>Nested elements</h3>
+        
+          <p>
+            Elements can be formatted inside other elements by nesting. This means that both opening and closing tags of a "child" element will appear between its "parent's" opening and closing tags
+          </p>
+        
+          <figure>
+            <figcaption>
+              Here is the general format of a nested element,
+            </figcaption>
+            <pre>
+              <i>&lt;!-- parent opening tag --&gt;</i>
+              &lt;div&gt; 
+                <i>&lt;!-- child opening and closing tags --&gt;</i>
+                &lt;div&gt;&lt;/div&gt;   
+              <i>&lt;!-- parent closing tag &gt;</i>
+              &lt;/div&gt;
+            </pre>
+          </figure>
+          
+          <figure>
+            <figcaption>
+              an example of a <strong>list items</strong> 
+              nested inside an <strong>unordered list</strong>
+            </figcaption>
+            <pre>
+              &lt;ul&gt;
+                &lt;li&gt; 1 &lt;/li&gt;
+                &lt;li&gt; 2 &lt;/li&gt;
+                &lt;li&gt; 3 &lt;/li&gt;
+              &lt;/ul&gt;
+            </pre>
+          </figure>
+          
+          <figure>
+            <figcaption>
+              and an example of <strong>table</strong> elements nested up to two levels
+            </figcaption>
+            <pre>
+              &lt;table&gt;
+                &lt;tr&gt;
+                  &lt;th&gt;Heading 1&lt;/th&gt;
+                  &lt;th&gt;Heading 1&lt;/th&gt;
+                &lt;/tr&gt;
+              &lt;/table&gt;
+            </pre>
+          </figure>
+        </section>
+        
+        <h2>Common tags</h2>
+        
+        <i>
+          (A full list can be found
+          <a href="https://www.w3schools.com/TAGS/default.asp">here</a>)
+        </i>
+        
+        <h2>Headings</h2>
+        
+        <p>
+          You've already seen three, here are the others:
+        </p>
+        
+        <h4>h4 heading</h4>
+        <h5>h5 heading</h5>
+        <h6>h6 heading</h6>
+        
+        <h2>Paragraphs</h2>
+        
+        <p>
+          This is a paragraph. Paragaraphs are styled with margins to separate them from other paragraphs. Reduce the width of you browser so that this sentence falls on multiple lines so you can see how the paragraph tag works
+        </p>
+        
+        <p>
+          This is a paragraph. Paragaraphs are styled with margins to separate them from other paragraphs. Reduce the width of you browser so that this sentence falls on multiple lines so you can see how the paragraph tag works
+        </p>
+        
+        <h2>Lists</h2>
+        
+        <h3>Ordered</h3>
+        
+        <ol>
+          <li>Items</li>
+          <li>are</li>
+          <li>numbers</li>
+        </ol>
+        
+        <h3>Unordered</h3>
+        
+        <ul>
+          <li>Items</li>
+          <li>are</li>
+          <li>bullets</li>
+        </ul>
+        
         <h2>Tables</h2>
-
+        
         <table>
-        <tr>
+          <tr>
             <th>Colour 1</th>
             <th>Colour 2</th>
             <th>Result</th>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>blue</td>
             <td>yellow</td>
             <td>green</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>blue</td>
             <td>red</td>
             <td>purple</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>red</td>
             <td>yellow</td>
             <td>orange</td>
-        </tr>
+          </tr>
         </table>
-
+        
         <h2>Input</h2>
-
+        
+        <p>
+          All input elements are defined by <code>input</code> tag, their type are defined by a <code>type</code> attribute. Below is a sample of 
+          <a href="https://www.w3schools.com/html/html_form_input_types.asp">
+            input types,
+          </a>
+          together with they way they are rendered to the screen:
+        </p>
+        
         button <input type="button" value="button">
         checkbox <input type="checkbox">
         color <input type="color">
