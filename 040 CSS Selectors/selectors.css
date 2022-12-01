@@ -11,6 +11,7 @@ figcaption {
 
 figure::before {
   display: block;
+  font-family: Monospace;
   width: fit-content;
   background: #ddd;
   border: 2px solid #666;
