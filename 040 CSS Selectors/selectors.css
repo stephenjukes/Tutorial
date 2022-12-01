@@ -9,17 +9,14 @@ figcaption {
   margin: 10px 0;
 }
 
-figure::before, 
-code {
+figure::before {
+  display: block;
   width: fit-content;
   background: #ddd;
   border: 2px solid #666;
   border-radius: 10px;
-}
-
-figure::before {
-  display: block;
   margin: 5px 0;
+  padding: 2px 6px;
 }
 
 *::after {
