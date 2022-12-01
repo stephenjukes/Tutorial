@@ -34,6 +34,7 @@
     margin: 5px;
     border: 5px solid gray;
     border-radius: 100%;
+    padding: 0;
   }
   
   li:nth-child(1) { background: red; }
