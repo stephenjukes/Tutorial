@@ -193,12 +193,10 @@
               Here is the general format of a nested element,
             </figcaption>
 <pre>
-  <i>&lt;!-- parent opening tag --&gt;</i>
-  &lt;div&gt; 
-    <i>&lt;!-- child opening and closing tags --&gt;</i>
-    &lt;div&gt;&lt;/div&gt;   
-  <i>&lt;!-- parent closing tag &gt;</i>
-  &lt;/div&gt;
+  &lt;div&gt;     // parent opening tag
+    &lt;div&gt;   // child opening tag
+    &lt;/div&gt;  // child closing tag
+  &lt;/div&gt;    // parent closing tag
 </pre>
           </figure>
           
@@ -224,7 +222,7 @@
   &lt;table&gt;
     &lt;tr&gt;
       &lt;th&gt;Heading 1&lt;/th&gt;
-      &lt;th&gt;Heading 1&lt;/th&gt;
+      &lt;th&gt;Heading 2&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/table&gt;
 </pre>
