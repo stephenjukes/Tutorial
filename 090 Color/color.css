@@ -128,12 +128,13 @@ figcaption {
 #grayscale div:nth-of-type(4) { background: #333; }
 #grayscale div:nth-of-type(5) { background: #444; }
 #grayscale div:nth-of-type(6) { background: #555; }
+#grayscale div:nth-of-type(6)::before { content: '#555' }
 #grayscale div:nth-of-type(7) { background: #666; }
 #grayscale div:nth-of-type(8) { background: #777; }
-#grayscale div:nth-of-type(8)::before { content: '#777' }
 #grayscale div:nth-of-type(9) { background: #888; }
 #grayscale div:nth-of-type(10) { background: #999; }
 #grayscale div:nth-of-type(11) { background: #aaa; }
+#grayscale div:nth-of-type(11)::before { content: '#aaa' }
 #grayscale div:nth-of-type(12) { background: #bbb; }
 #grayscale div:nth-of-type(13) { background: #ccc; }
 #grayscale div:nth-of-type(14) { background: #ddd; }
@@ -148,12 +149,13 @@ figcaption {
 #dark-to-medium div:nth-of-type(4) { background: #300; }
 #dark-to-medium div:nth-of-type(5) { background: #400; }
 #dark-to-medium div:nth-of-type(6) { background: #500; }
+#dark-to-medium div:nth-of-type(6)::before { content: '#500'}
 #dark-to-medium div:nth-of-type(7) { background: #600; }
 #dark-to-medium div:nth-of-type(8) { background: #700; }
-#dark-to-medium div:nth-of-type(8)::before { content: '#700'}
 #dark-to-medium div:nth-of-type(9) { background: #800; }
 #dark-to-medium div:nth-of-type(10) { background: #900; }
 #dark-to-medium div:nth-of-type(11) { background: #a00; }
+#dark-to-medium div:nth-of-type(11)::before { content: '#a00'}
 #dark-to-medium div:nth-of-type(12) { background: #b00; }
 #dark-to-medium div:nth-of-type(13) { background: #c00; }
 #dark-to-medium div:nth-of-type(14) { background: #d00; }
@@ -168,12 +170,13 @@ figcaption {
 #medium-to-light div:nth-of-type(4) { background: #f33; }
 #medium-to-light div:nth-of-type(5) { background: #f44; }
 #medium-to-light div:nth-of-type(6) { background: #f55; }
+#medium-to-light div:nth-of-type(6)::before { content: '#f66'}
 #medium-to-light div:nth-of-type(7) { background: #f66; }
 #medium-to-light div:nth-of-type(8) { background: #f77; }
-#medium-to-light div:nth-of-type(8)::before { content: '#f77'}
 #medium-to-light div:nth-of-type(9) { background: #f88; }
 #medium-to-light div:nth-of-type(10) { background: #f99; }
 #medium-to-light div:nth-of-type(11) { background: #faa; }
+#medium-to-light div:nth-of-type(11)::before { content: '#faa'}
 #medium-to-light div:nth-of-type(12) { background: #fbb; }
 #medium-to-light div:nth-of-type(13) { background: #fcc; }
 #medium-to-light div:nth-of-type(14){ background: #fdd; }
