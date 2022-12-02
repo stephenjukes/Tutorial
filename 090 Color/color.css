@@ -78,12 +78,9 @@ div::before {
 
 figure {
     position: relative;
-/*     display: inline-block; */
-    width: 200px;
-    margin: 20px auto 40px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    padding: 20px;
+    width: 250px;
+    margin: 30px auto 50px;
+    padding: 5px;
 }
 
 figcaption {
