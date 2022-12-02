@@ -1,5 +1,6 @@
 h1 { color: black; }
 li { margin-bottom: 20px; }
+code { margin: 10px 0; }
 
 * { color: #444; }
 li { color: BurlyWood; }
