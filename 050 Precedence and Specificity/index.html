@@ -11,54 +11,428 @@
     <body>
         <h1>Precedence and Specificity</h1>
 
-        <h3>My Ordered List</h3>
-        <i>(I am styled only by the universal selector - '*')</i>
+        <h2>Introduction</h2>
+        
+        <p>
+          In this section, we explore what is meant by CSS's full name -
+          '<strong>C</strong>ascading 
+          <strong>S</strong>tyle 
+          <strong>S</strong>heets'.
+          
+          The idea of 'cascading' comes from the way in which the same property of the same element can be styled multiple times, and each time the previous styling of that property is overridden. In fact, we'll see that it is not so much about order, (though this is also a factor), but more about how more specific selectors override the styles of more general selectors. The following is an example of this 'cascading' or 'overiding' behaviour:
+        </p>
+        
+        <figure id="cascade">
+          <figcaption>
+            The 'required' input retains all styles provided by the general input selector, but then overrides the border with its own style.
+          </figcaption>
+          
+<pre>
+<h3>HTML</h3>
+&lt;h3&gt;Inputs&lt;/h3&gt;
+&lt;input type="text"&gt;
+&lt;input type="text" required&gt;
+&lt;input type="text"&gt;
+</pre>
+          
+<pre>
+<h3>CSS</h3>
+input {
+  ...
+  width: 100%
+  border-radius: 12px;
+  <strong>border: 2px solid gray;</strong>
+}
 
-        <ol class="ordered-list-class">
+input:required {
+  <strong>border: 3px solid orange;</strong>
+}
+</pre>
+          <div>
+            <h3>Rendered</h3>
+            <input type="text">
+            <input type="text" required>
+            <input type="text">
+          </div>
+        </figure>
+        
+        <figure id="specificity">
+          <figcaption>
+            In order to determine which style is applied, selectors are given a score, generally composed of 3 parts, representing the number of ids, classes or attributes, and tags used in the selector.
+          </figcaption>
+          <ul id="specificity-score">
+            <li>ids</li> :
+            <li>classes / attributes</li> :
+            <li>tags</li>
+          </ul>
+        </figure>
+        
+        <p>
+          This means that a selector composed of 1 id, 2 classes, 3 attributes and 4 tags would have the score 
+          
+          <code>1 : 5 : 4</code>' 
+          
+          where places to the left have more weight than places to their right. This would therefore have a lower score than a selector composed of 4 ids, 3 classes, 2 attributes and 1 tag, which would have a score of <code>4 : 5 : 1</code>'. The logic is similar to that of mathematical place value. Although the numbers cannot be thought of as being part of a base, it can still be helpful to remove the colons to consider the score as a base 10 number. Using <i>hundreds</i>, <i>tens</i> and <i>units</i>, makes the previous scores <i>154</i> and <i>451</i> much more intuitive.
+        </p>
+        
+        <p>
+          With this in mind, we can see in the above example how the orange border was able to override the gray border - the selector of the orange border is composed of a tag and attribute, producing a score of <code>0 : 1 : 1</code>' or <i>11</i>, while the gray border is composed only of a tag, producing a score of <code>0 : 0 : 1</code>', or <i>1</i>.
+        </p>
+        
+        <p>
+          The examples in the next section are all based on the same html and the CSS accumulates with each line to show how the last line overrides the others, (due in one case to order, but due in all other cases to the specificity score shown to the right of the CSS). This is why the first list item retains its blue styling in all subsequent examples after being styled in the 'Multiple Tags' section.
+        </p>
+        
+        <h2>Let's try it out</h2>
+        
+        <figure>
+          <h3>No Styling</h3>
+          
+          <figcaption>
+            This is an example of the list with no CSS styling. You can see that the last 2 items are styled inline in the html. Otherwise all other elements use the default black color.
+          </figcaption>
+          
+          <ol class="unordered-list-class">
             <li>
-            <code>li</code> <br>
-            I am a simple 'li' tag. I am styled by the 'li' tag selector. I'm currently 'aqua', but uncomment the last line in the CSS, and see what happens. This shows that everything being equal with specificity, styles that come later in the CSS overrides styles that are declared before.
+              &lt;li&gt;
+            </li> 
+        
+            <li class="my-class">
+              &lt;li class="my-class"&gt;
             </li>
         
-        <li class="my-class">
-            <code>.my-class</code> <br>
-            I am also an 'li' tag, but am styled using a 'class' selector, which overrides the 'tag' selector
-        </li>
+            <li class="my-class" id="my-id">
+              &lt;class="my-class" id="my-id"&gt;
+            </li>
         
-        <li id="my-id">
-            <code>#my-id</code> <br>
-            'id' selectors override 'class' selectors
-        </li>
-        </ol>
-
-
-        <h3>My Unordered List</h3>
-        <i>(I am also styled only by the universal selector - '*')</i>
-
-        <ul class="unordered-list-class">
-        <li>
-            <code>ul li</code> <br>
-            I am styled using both the 'li' selector and its 'ul' ancestor, which overrides the styling by the 'li' selector alone. The more tags used in the selector, the more specific (and powerful) that selector will be
-        </li> 
+            <li class="my-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class" id="my-id" style="color:magenta"&gt;
+            </li>
         
-        <li class="my-class">
-            <code>li.my-class</code> <br>
-            Like item '2' of the ordered list, I am styled by class, but combined with the tag, overrides styling by class alone
-        </li>
+            <li class="my-class my-important-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class my-important-class" id="my-id" style="color:magenta"&gt;
+            </li>
+          </ol>
+        </figure>
         
-        <li id="my-id">
-            <code>.unordered-list-class #my-id</code> <br>
-            But, an 'id' with a 'class' will override an 'id' selector alone
-        </li>
+        <figure id="universal-selector">
+          <h3>Universal Selector</h3>
+          
+          <figcaption>
+            The Universal Selector styles everything including list items, heading, and even this text. Note that the last 2 items retain their original styles, since inline styling is very powerful. The same will occur over most of the following examples.
+          </figcaption>
+          
+          <code>0 : 0 : 0</code>
+          
+          <ol class="unordered-list-class">
+            <li>
+              &lt;li&gt;
+            </li> 
         
-        <li id="my-id" style="color:magenta">
-            <code>&lt;li style="color:magenta"&gt;</code> <br>
-            Inline styling will override anything styled with CSS...
-        </li>
+            <li class="my-class">
+              &lt;li class="my-class"&gt;
+            </li>
         
-        <li id=my-id" class="my-important-class" style="color:magenta">
-            <code>color: red !important</code> <br>
-            ... except when the !important property is used in CSS, which overrides everything! (It is recommended not to use this property, since it is unlikely that anything is really THAT important that it should never be overidden.)
-        </li>
+            <li class="my-class" id="my-id">
+              &lt;class="my-class" id="my-id"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class" id="my-id" style="color:magenta"&gt;
+            </li>
+        
+            <li class="my-class my-important-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class my-important-class" id="my-id" style="color:magenta"&gt;
+            </li>
+          </ol>
+        </figure>
+        
+        <figure id="order">
+          <h3>Order</h3>
+          
+          <figcaption>
+            The selector is exactly the same as the previous, and therefore so is its specificity. However, it overrides the previous styles because it appears later in the CSS file.
+          </figcaption>
+          
+          <code>0 : 0 : 0</code>
+          
+          <ol class="unordered-list-class">
+            <li>
+              &lt;li&gt;
+            </li> 
+        
+            <li class="my-class">
+              &lt;li class="my-class"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id">
+              &lt;class="my-class" id="my-id"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class" id="my-id" style="color:magenta"&gt;
+            </li>
+        
+            <li class="my-class my-important-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class my-important-class" id="my-id" style="color:magenta"&gt;
+            </li>
+          </ol>
+        </figure>
+        
+        <figure id="single-tag">
+          <h3>Single Tag</h3>
+          
+          <figcaption>
+            The single 'li' tag used as a selector adds 1 to the 'tag' column and overrides both previous universal selectors. It is specific to list items though, which is why the heading and this text remains styled as previous. The tag selector is still not sufficient to override the inline styling of the last 2 items.
+          </figcaption>
+          
+          <code>0 : 0 : 1</code>
+          
+          <ol class="unordered-list-class">
+            <li>
+              &lt;li&gt;
+            </li> 
+        
+            <li class="my-class">
+              &lt;li class="my-class"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id">
+              &lt;class="my-class" id="my-id"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class" id="my-id" style="color:magenta"&gt;
+            </li>
+        
+            <li class="my-class my-important-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class my-important-class" id="my-id" style="color:magenta"&gt;
+            </li>
+          </ol>
+        </figure>
+        
+        <figure id="multiple-tags">
+          <h3>Multiple Tags</h3>
+          
+          <figcaption>
+            Now we use 2 tags to target 'all <strong>list items</strong> within an <strong>ordered list</strong>'. This adds 2 to the tag column and therefore overides list items previously styled by the list item alone.
+          </figcaption>
+          
+          <code>0 : 0 : 2</code>
+          
+          <ol class="unordered-list-class">
+            <li>
+              &lt;li&gt;
+            </li> 
+        
+            <li class="my-class">
+              &lt;li class="my-class"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id">
+              &lt;class="my-class" id="my-id"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class" id="my-id" style="color:magenta"&gt;
+            </li>
+        
+            <li class="my-class my-important-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class my-important-class" id="my-id" style="color:magenta"&gt;
+            </li>
+          </ol>
+        </figure>
+        
+        <figure id="class">
+          <h3>Class</h3>
+          
+          <figcaption>
+            The class selector adds 1 to the class column and overrides anything that is only selected using tags. Hence, the 2 items which have the selected class but do not have inline styling are styled accordingly.
+          </figcaption>
+          
+          <code>0 : 1 : 0</code>
+          
+          <ol class="unordered-list-class">
+            <li>
+              &lt;li&gt;
+            </li> 
+        
+            <li class="my-class">
+              &lt;li class="my-class"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id">
+              &lt;class="my-class" id="my-id"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class" id="my-id" style="color:magenta"&gt;
+            </li>
+        
+            <li class="my-class my-important-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class my-important-class" id="my-id" style="color:magenta"&gt;
+            </li>
+          </ol>
+        </figure>
+        
+        <figure id="class-and-tag">
+          <h3>Class and Tag</h3>
+          
+          <figcaption>
+            Using the <strong>list item</strong> in the selector as well as the class adds 1 to the tag column while retaining the value added to the class column. This higher score therefore overrides the styling by the class alone.
+          </figcaption>
+          
+          <code>0 : 1 : 1</code>
+          
+          <ol class="unordered-list-class">
+            <li>
+              &lt;li&gt;
+            </li> 
+        
+            <li class="my-class">
+              &lt;li class="my-class"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id">
+              &lt;class="my-class" id="my-id"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class" id="my-id" style="color:magenta"&gt;
+            </li>
+        
+            <li class="my-class my-important-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class my-important-class" id="my-id" style="color:magenta"&gt;
+            </li>
+          </ol>
+        </figure>
+        
+        <figure id="id">
+           <h3>Id</h3>
+          
+          <figcaption>
+            Ids should be unique to an element, making it a very specific selector, and therefore very powerful. The id selector adds 1 to the id column and overrides anything that is selected using classes, attributes or tags.
+          </figcaption>
+          
+          <code>1 : 0 : 0</code>
+         
+          <ol class="unordered-list-class">
+            <li>
+              &lt;li&gt;
+            </li> 
+        
+            <li class="my-class">
+              &lt;li class="my-class"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id">
+              &lt;class="my-class" id="my-id"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class" id="my-id" style="color:magenta"&gt;
+            </li>
+        
+            <li class="my-class my-important-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class my-important-class" id="my-id" style="color:magenta"&gt;
+            </li>
+          </ol>
+        </figure>
+        
+        <figure id="class-and-id">
+          <h3>Class and Id</h3>
+          
+          <figcaption>
+            However, as before, an id used in conjunction with ancestor class or tag will override any selectors using an id alone. In practice, this would never be necessary, since ids should be unique anyway.
+          </figcaption>
+          
+          <code>1 : 0 : 1</code>
+          
+          <ol class="unordered-list-class">
+            <li>
+              &lt;li&gt;
+            </li> 
+        
+            <li class="my-class">
+              &lt;li class="my-class"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id">
+              &lt;class="my-class" id="my-id"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class" id="my-id" style="color:magenta"&gt;
+            </li>
+        
+            <li class="my-class my-important-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class my-important-class" id="my-id" style="color:magenta"&gt;
+            </li>
+          </ol>
+        </figure>
+        
+        <figure id="inline">
+           <h3>Inline</h3>
+          
+          <figcaption>
+            No extra CSS here and no further style changes, since the inline styling applied by the html for the last 2 items have been apparent since the beginning.
+          </figcaption>
+          
+          <code>1 : 0 : 0 : 0</code>
+         
+          <ol class="unordered-list-class">
+            <li>
+              &lt;li&gt;
+            </li> 
+        
+            <li class="my-class">
+              &lt;li class="my-class"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id">
+              &lt;class="my-class" id="my-id"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class" id="my-id" style="color:magenta"&gt;
+            </li>
+        
+            <li class="my-class my-important-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class my-important-class" id="my-id" style="color:magenta"&gt;
+            </li>
+          </ol>
+        </figure>
+        
+        <figure id="important">
+          <h3>!Important</h3>
+          
+          <figcaption>
+            Just when you thought that nothing would override inline styling, enter the '!important' property. This property is added after the relevant value, as below, and cannot be overridden, (except possibly with the help of an id, classes or tags). It is generally not a good practice to use the !important property, even though it can be tempting to add it when you can't work out why your styles are not taking effect. However, its existence does suggest that there is a use for it. One might be overriding styles that have been applied by third party libraries.
+          </figcaption>
+          
+          <code>1 : 0 : 0 : 0 : 0</code>
+          
+          <ol class="unordered-list-class">
+            <li>
+              &lt;li&gt;
+            </li> 
+        
+            <li class="my-class">
+              &lt;li class="my-class"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id">
+              &lt;class="my-class" id="my-id"&gt;
+            </li>
+        
+            <li class="my-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class" id="my-id" style="color:magenta"&gt;
+            </li>
+        
+            <li class="my-class my-important-class" id="my-id" style="color:magenta">
+              &lt;li class="my-class my-important-class" id="my-id" style="color:magenta"&gt;
+            </li>
+          </ol>
+        </figure>
     </body>
 </html>

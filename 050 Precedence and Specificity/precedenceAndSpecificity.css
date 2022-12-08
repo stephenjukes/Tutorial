@@ -1,14 +1,172 @@
-h1 { color: black; }
-li { margin-bottom: 20px; }
-code { margin: 10px 0; }
+ #specificity {
+    border: none;
+ }
 
-* { color: #444; }
-li { color: BurlyWood; }
-ul li { color: Chocolate; }
-.my-class {color: CadetBlue; }
-ul li.my-class {color: DarkCyan; }
-#my-id { color: LightGreen; }
-.unordered-list-class #my-id { color: Green; }
-.my-important-class { color: red !important; }
+  #specificity-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+  }
+  
+  #specificity-score li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    height: 80px;
+    width: 80px;
+    font-size: 15px;
+    margin: 0 10px;
+    background: #eee;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+  }
+  
+  #specificity-score {
+    vertical-align: middle;
+  }
+  
+  figure li {
+    font: bold 15px/30px Monospace;
+  }
 
-/* li { color: DarkOrange; } */
+  code {
+    background: none;
+    border: none;
+  }
+  
+  code::before {
+    width: fit-content;
+    margin-right: 20px;
+    color: #333;
+    font-family: Monospace;
+    background: #eee;
+    border: 2px solid #aaa;
+    border-radius: 15px;
+    padding: 3px 12px;
+  }
+  
+  input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 15px 0;
+    border-radius: 12px;
+    border: 2px solid gray;
+  }
+  
+  input:required {
+    border: 3px solid orange;
+  }
+  
+  #cascade {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    border: none;
+  }
+  
+  #cascade > :not(figcaption) {
+    flex: 1 0 auto;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  #cascade h3 {
+    font-family: Monospace;
+    margin: 0 0 10px 0;
+  }
+  
+  #universal-selector * { color: #bbb; }
+  #universal-selector code::before {
+    content: "* { color: #bbb; }";
+  }
+  
+  #order * { color: #bbb;; }
+  #order * { color: #555; }
+  #order code::before {
+    content: "* { color: #555; }";
+  }
+  
+  #single-tag * { color: #bbb;; }
+  #single-tag * { color: #555; }
+  #single-tag li { color: #39f; }
+  #single-tag code::before {
+    content: "li { color: #39f; }";
+  }
+  
+  #multiple-tags * { color: #bbb;; }
+  #multiple-tags * { color: #555; }
+  #multiple-tags li { color: #39f; }
+  #multiple-tags ol li { color: blue; }
+  #multiple-tags code::before {
+    content: "ol li { color: blue; }";
+  }
+  
+  #class * { color: #bbb;; }
+  #class * { color: #555; }
+  #class li { color: #39f; }
+  #class ol li { color: blue; }
+  #class .my-class { color: #fa0; }
+  #class code::before {
+    content: ".my-class { color: #fa0; }";
+  }
+  
+  #class-and-tag * { color: #bbb;; }
+  #class-and-tag * { color: #555; }
+  #class-and-tag li { color: #39f; }
+  #class-and-tag ol li { color: blue; }
+  #class-and-tag .my-class { color: #fa0; }
+  #class-and-tag li.my-class { color: #f50; }
+  #class-and-tag code::before {
+    content: "li.my-class { color: #f50; }";
+  }
+  
+  #id * { color: #bbb;; }
+  #id * { color: #555; }
+  #id li { color: #39f; }
+  #id ol li { color: blue; }
+  #id .my-class { color: #fa0; }
+  #id li.my-class { color: #f50; }
+  #id #my-id { color: #6c6; }
+  #id code::before {
+    content: "#my-id { color #6c6; }";
+  }
+  
+  #class-and-id * { color: #bbb;; }
+  #class-and-id * { color: #555; }
+  #class-and-id li { color: #39f; }
+  #class-and-id ol li { color: blue; }
+  #class-and-id .my-class { color: #fa0; }
+  #class-and-id li.my-class { color: #f50; }
+  #class-and-id #my-id { color: #6c6; }
+  #class-and-id ol #my-id { color: #090; }
+  #class-and-id code::before {
+    content: "ol #my-id { color: #090; }";
+  }
+  
+  #inline * { color: #bbb;; }
+  #inline * { color: #555; }
+  #inline li { color: #39f; }
+  #inline ol li { color: blue; }
+  #inline .my-class { color: #fa0; }
+  #inline li.my-class { color: #f50; }
+  #inline #my-id { color: #6c6; }
+  #inline .unordered-list-class #my-id { color: #090; }
+  
+  #important * { color: #bbb;; }
+  #important * { color: #555; }
+  #important li { color: #39f; }
+  #important ol li { color: blue; }
+  #important .my-class { color: #fa0; }
+  #important li.my-class { color: #f50; }
+  #important #my-id { color: #6c6; }
+  #important .unordered-list-class #my-id { color: #090; }
+  #important .my-important-class { color: red !important; }
+  #important code::before {
+    content: ".my-important-class { color: red !important; }";
+  }
